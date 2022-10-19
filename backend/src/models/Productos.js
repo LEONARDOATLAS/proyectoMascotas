@@ -4,6 +4,11 @@ const {
 } = mongoose;
 
 const ProductoSchema = new Schema({
+    id: {
+        type: Number,
+        require: true,
+        unique: true
+    },
     codigo: {
         type: String,
         require: true
