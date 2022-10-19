@@ -1,0 +1,46 @@
+[
+    {
+        "id": 1,
+        "codigo": "HU0004",
+        "nombre": "HUESO CARNUDO  ",
+        "categoria": "HUESOS",
+        "descripcion": "HUESOS CARNUDO DE 150 GRAMOS",
+        "valor": 1500,
+        "iva": 19,
+        "estado": 1
+        
+    },
+    {
+        "id": 2,
+        "codigo": "HU0004",
+        "nombre": "HUESO CARNUDO  ",
+        "categoria": "HUESOS",
+        "descripcion": "HUESOS CARNUDO DE 150 GRAMOS",
+        "valor": 1500,
+        "iva": 19,
+        "estado": 1
+        
+    },
+    {
+        "id": 3,
+        "codigo": "HU0004",
+        "nombre": "HUESO CARNUDO  ",
+        "categoria": "HUESOS",
+        "descripcion": "HUESOS CARNUDO DE 150 GRAMOS",
+        "valor": 1500,
+        "iva": 19,
+        "estado": 1
+        
+    },
+    {
+        "id": 4,
+        "codigo": "HU0004",
+        "nombre": "HUESO CARNUDO  ",
+        "categoria": "HUESOS",
+        "descripcion": "HUESOS CARNUDO DE 150 GRAMOS",
+        "valor": 1500,
+        "iva": 19,
+        "estado": 1
+        
+    }
+]
