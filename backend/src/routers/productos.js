@@ -4,7 +4,7 @@ const productController = require("../controllers/ControllerProducto")
 
 router.get("/listar", productController.productoListar);
 router.post("/save", productController.productoAgregar)
-router.get("/:id", productController.listarProductoId)
+router.get("/listar/:id", productController.listarProductoId)
 router.post("/editar/:id", productController.productoEditar)
 router.post("/eliminar/:id", productController.productoEliminar)
 

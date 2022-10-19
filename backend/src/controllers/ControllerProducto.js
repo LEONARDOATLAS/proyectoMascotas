@@ -4,6 +4,7 @@ const Productos = require('../models/Productos');
 
 exports.productoAgregar = async (req, res) => {
   const nuevoProducto = new Productos({
+      id: req.body.id,
       codigo: req.body.codigo,
       nombre: req.body.nombre,
       categoria: req.body.categoria,
@@ -27,7 +28,7 @@ exports.productoListar = async (req, res) => {
 
 exports.listarProductoId = async (req, res) => {
   try {
-    const productos = await Productos.find({_id:req.params.id});
+    const productos = await Productos.find({id:req.params.id});
   res.json({productos})
   } catch (error) {
     res.status(400).send("Hubo un error");
@@ -37,7 +38,7 @@ exports.listarProductoId = async (req, res) => {
 
 exports.productoEditar = async (req, res) => {
    await Productos.findOneAndUpdate(
-      {_id:req.params.id}
+      {id:req.params.id}
       ,{
         codigo: req.body.codigo,
         nombre: req.body.nombre,
@@ -52,6 +53,6 @@ exports.productoEditar = async (req, res) => {
 
 exports.productoEliminar = async (req, res) => {
     await Productos.findOneAndDelete(
-      {_id:req.params.id})
+      {id:req.params.id})
       res.json({msg: "producto eliminado "})
 }
