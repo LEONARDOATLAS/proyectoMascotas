@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-mongoose.connect("mongodb://localhost:27017/tiendaMascotas")
+mongoose.connect("mongodb://localhost:27017/tiendaMascotasgrupo")
 
 const myConnection = mongoose.connection;
 
