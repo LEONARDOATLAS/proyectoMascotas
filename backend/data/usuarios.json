@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "nombre": "LEONARDO MERCHAN AGUILAR",
+        "email": "desarrollador1@gmail.com",
+        "password": "desarrrolador1"
+
+    },
+    {
+        "id": 2,
+        "nombre": "CAMILO ",
+        "email": "desarrollador2@gmail.com",
+        "password": "desarrrolador2"
+
+    },
+    {
+        "id": 3,
+        "nombre": "ALISON ",
+        "email": "desarrollador3@gmail.com",
+        "password": "desarrrolador3"
+
+    },
+    {
+        "id": 3,
+        "nombre": "ANDRES ",
+        "email": "desarrollador4@gmail.com",
+        "password": "desarrrolador4"
+
+    },
+    {
+        "id": 5,
+        "nombre": "FRANSUAT ",
+        "email": "desarrollador5@gmail.com",
+        "password": "desarrrolador5"
+
+    }
+
+]

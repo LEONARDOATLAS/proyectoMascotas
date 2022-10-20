@@ -15,6 +15,6 @@ app.listen(5000, function () {
     console.log('Prueba - Servidor OK!')
 })
 
-app.get("/", (request, response) => {
-    response.send("<h1>Prueba Servidor OK!!!")
+app.get("/", (request, res) => {
+    res.send("<h1>Prueba Servidor OK!!!")
 })

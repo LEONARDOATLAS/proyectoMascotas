@@ -1,0 +1,28 @@
+[
+    {
+        "id": 1,
+        "codigo": "CA001",
+        "nombre": "HUESOS",
+        "estado": "true",
+        "creado": ""
+    },
+    {
+        "id": 2,
+        "codigo": "CA002",
+        "nombre": "HUESOS",
+        "estado": "true",
+        "creado": ""
+    },
+    {
+        "id": 3,
+        "codigo": "CA003",
+        "nombre": "INYECCIONES",
+        "estado": "true"
+    },
+    {
+        "id": 4,
+        "codigo": "CA004",
+        "nombre": "CONCENTRADO",
+        "estado": "true"
+    }
+]
