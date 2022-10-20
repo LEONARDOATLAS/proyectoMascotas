@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "nombre": "Pepito Perez",
+        "direccion": "Avenida Siempre viva 123",
+        "telefono": 3211234567,
+        "correo": "pepitoperez@gmail.com"
+    },
+    {
+        "id": 2,
+        "nombre": "Pablito Paez",
+        "direccion": "Calle Nunca muerta 987",
+        "telefono": 3123216549,
+        "correo": "pablopaez@gmail.com"
+    },
+    {
+        "id": 3,
+        "nombre": "Fulanito de Tal",
+        "direccion": "Transversal en coma 456",
+        "telefono": 3219876543,
+        "correo": "elfulanodetal58@gmail.com"
+    },
+    {
+        "id": 4,
+        "nombre": "Kenny Bell",
+        "direccion": "Diagonal 45 # 1-9 sur",
+        "telefono": 3117613495,
+        "correo": "KeniVel_Wei@outlook.com"
+    }
+]
