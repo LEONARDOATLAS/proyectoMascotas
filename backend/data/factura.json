@@ -1,0 +1,26 @@
+[
+    {
+        "id":1,
+        "categoria": "comida",
+        "id_cliente": 1,
+        "cantidad": 10,
+        "valor_unitario":10000,
+        "valor_total": 10000
+    },
+    {
+        "id":2,
+        "categoria": "aseo",
+        "id_cliente": 2,
+        "cantidad": 2,
+        "valor_unitario":15000,
+        "valor_total": 15000
+    },
+    {
+        "id":3,
+        "categoria": "juguete",
+        "id_cliente": 3,
+        "cantidad": 1,
+        "valor_unitario":13000,
+        "valor_total": 13000  
+    }
+]
