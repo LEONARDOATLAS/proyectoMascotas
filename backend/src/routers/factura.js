@@ -1,6 +1,6 @@
-const express = require('express')
-const router = express.Router()
-const facturaController = require("../controllers/ControllerFactura")
+const express = require('express');
+const router = express.Router();
+const facturaController = require("../controllers/controllerFactura");
 
 router.get("/listar",facturaController.facturaListar);
 router.post("/save", facturaController.facturaAgregar);
