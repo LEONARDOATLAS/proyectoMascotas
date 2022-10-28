@@ -1,24 +1,22 @@
-import logo from './logo.svg';
+import React, { Fragment }from 'react';
+import { BrowserRouter as Router, Route, Routes  } from 'react-router-dom';
 import './App.css';
+
+import Home from './pages/Home'
+import Plantilla from './pages/plantilla';
+import ProductoListar from './pages/products/ProductoListar';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+    <Router>
+      <Routes>
+        <Route path="/" exact element={<Home />} />
+        <Route path="/plantilla" exact element={<Plantilla />} />
+        <Route path="/productos" exact element={<ProductoListar />} />
+      </Routes>
+    </Router>
+   </Fragment>
   );
 }
 

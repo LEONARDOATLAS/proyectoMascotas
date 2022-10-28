@@ -15,8 +15,8 @@ router.get('/productoscategorias', (req, res) =>{
         },
     }, {$unwind: "$productoxcategoria"}
     ])
-        .then((result)=>{res.send(result); console.log(result)})
-        .catch((error)=>{res.send(error); console.log(error)});
+        .then((result)=>{res.send(result)})
+        .catch((error)=>{res.send(error)});
 
 })
 
@@ -26,11 +26,11 @@ router.get('/productoscategorias/:id', (req, res) => {
     var dataCategorias = [];
     //modeloCategoria.find({ nombre: "Comestibles" }).then(data => {
     modeloCategoria.find({id:req.params.id}).then(data => {
-            console.log("Categoria:")
+            //console.log("Categoria:")
             data.map((d, k) => {dataCategorias.push(d.id);})
             modeloProducto.find({ id_categoria: { $in: dataCategorias } })
                 .then(data => {
-                    console.log("Productos de la categoria:")
+                    //console.log("Productos de la categoria:")
                     res.send(data);
                 })
                 .catch(error => {
