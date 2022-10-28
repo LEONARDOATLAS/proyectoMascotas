@@ -3,6 +3,9 @@ const app = express()
 
 const connection = require('./db/connection')
 
+var cors = require('cors');
+app.use(cors())
+
 const bodyParser = require('body-parser')
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: true }))
@@ -10,6 +13,8 @@ app.use(bodyParser.urlencoded({extended: true }))
 //Se añaden los endpoints
 const router = require('./routers/routers')
 app.use('/api', router)
+
+
 
 app.listen(5000, function () {
     console.log('Prueba - Servidor OK!')

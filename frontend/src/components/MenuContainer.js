@@ -25,7 +25,7 @@ const MenuContainer = () => {
 
         <li className="nav-item">
           <Link to={"/Plantilla"} className="nav-link"
-          activeClassName="is-active">
+          >
             
             <i className="nav-icon fa fa-home" />
             <p>
@@ -37,7 +37,7 @@ const MenuContainer = () => {
 
 
         <li className="nav-item">
-          <Link to={"/listarproductos"} className="nav-link">
+          <Link to={"/productos"} className="nav-link">
             <i className="nav-icon fa fa-tasks" />
             <p>
               Productos

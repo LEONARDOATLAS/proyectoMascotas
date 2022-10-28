@@ -2,11 +2,15 @@ const express = require('express');
 const router = express.Router();
 const productController = require("../controllers/ControllerProducto");
 
+
+const controllerprofesor = require('../controllers/ControllerProfesor');
+router.get("/listardos", controllerprofesor)
+
 router.get("/listar", productController.productoListar);
 router.post("/save", productController.productoAgregar)
 router.get("/listar/:id", productController.listarProductoId)
 router.post("/editar/:id", productController.productoEditar)
-router.post("/eliminar/:id", productController.productoEliminar)
+router.delete("/delete/:id", productController.productoEliminar)
 
 
 // rutas de consultas 

@@ -4,6 +4,7 @@ import './App.css';
 
 import Home from './pages/Home'
 import Plantilla from './pages/plantilla';
+import ProductoListar from './pages/products/ProductoListar';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Routes>
         <Route path="/" exact element={<Home />} />
         <Route path="/plantilla" exact element={<Plantilla />} />
+        <Route path="/productos" exact element={<ProductoListar />} />
       </Routes>
     </Router>
    </Fragment>
