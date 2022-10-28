@@ -1,16 +1,18 @@
 import React from "react";
 
-import Narvar from '../components/Narvar';
-import SidebarContainer from '../components/SidebarContainer'
-import ContentHeader from '../components/ContentHeard'
-import Footer from '../components/Footer'
 
-const Home = () => {
+import ContentHeader from '../components/ContentHeard';
+import Footer from "../components/Footer";
+import Narbar from "../components/Narvar";
+import SidebarContainer from "../components/SidebarContainer";
+
+
+const Plantilla = () => {
 
  
   return (
     <div className="wrapper">
-      <Narvar></Narvar>
+      <Narbar></Narbar>
       <SidebarContainer></SidebarContainer>
 
       <div className="content-wrapper">
@@ -29,4 +31,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Plantilla;
