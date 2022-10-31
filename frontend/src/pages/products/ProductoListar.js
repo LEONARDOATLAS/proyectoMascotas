@@ -64,7 +64,6 @@ const ProductoListar = () => {
   };
 
   //Refrescar la pagina 
-
   useEffect(() => {
     listaProductosdos();
   }, []);
@@ -82,12 +81,13 @@ const ProductoListar = () => {
           ruta={"/"}
         />
 
+        {/* Contenido de la pagina  */}
         <section className="content">
           <div className="card">
             <div className="card-header">
               <h3 className="card-title">
                 <Link
-                  to={"/agregarproductos"}
+                  to={"/productosagregar"}
                   type="button"
                   className="btn btn-block btn-primary btn-sm"
                 >
@@ -157,6 +157,9 @@ const ProductoListar = () => {
             </div>
           </div>
         </section>
+
+         {/* Fin contenido de la pagina  */}
+
       </div>
       <Footer></Footer>
     </div>
