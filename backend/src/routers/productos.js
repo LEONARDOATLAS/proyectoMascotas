@@ -9,7 +9,7 @@ router.get("/listardos", controllerprofesor)
 router.get("/listar", productController.productoListar);
 router.post("/save", productController.productoAgregar)
 router.get("/listar/:id", productController.listarProductoId)
-router.post("/editar/:id", productController.productoEditar)
+router.put("/editar/:id", productController.productoEditar)
 router.delete("/delete/:id", productController.productoEliminar)
 
 

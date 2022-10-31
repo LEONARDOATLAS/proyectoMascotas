@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams, useNavigate } from "react-router-dom";
 
 import ContentHeader from "../../components/ContentHeard";
 import Footer from "../../components/Footer";
@@ -9,23 +9,32 @@ import SidebarContainer from "../../components/SidebarContainer";
 import APIInvoke from "../../utils/APIInvoke";
 import Swal from 'sweetalert2'
 
+const ProductoEditar = () => {
 
-const ProductoFormulario = () => {
+  const navigate = useNavigate();
 
-  //const navigate = useNavigate();
+  const { idproducto } = useParams();
+  let arreglo = idproducto.split("@");
+  const conscodigo = arreglo[1];
+  const consnombre = arreglo[2];
+  const consid_categoria = arreglo[3];
+  const consdescripcion = arreglo[4];
+  const consvalor = arreglo[5];
+  const consiva = arreglo[6]
+  const conestado = arreglo[7]
+
 
   const [producto, setProducto] = useState({
-    id: "",
-    codigo: "",
-    nombre: "",
-    id_categoria: "",
-    descripcion: "",
-    valor: "",
-    iva: "",
-    estado: "",
+    codigo: conscodigo,
+    nombre: consnombre,
+    id_categoria: consid_categoria,
+    descripcion: consdescripcion,
+    valor: consvalor,
+    iva: consiva,
+    estado: conestado,
   });
 
-  const { id, codigo, nombre, id_categoria, descripcion, valor, iva, estado } =
+  const {codigo, nombre, id_categoria, descripcion, valor, iva, estado } =
     producto;
 
   const onChange = (e) => {
@@ -35,9 +44,11 @@ const ProductoFormulario = () => {
     });
   };
 
-  const crearProducto = async () => {
+  const editarProducto = async () => {
+    let arreglo = idproducto.split("@");
+    const idProducto = arreglo[0];
+
     const data = {
-      id: producto.id,
       codigo: producto.codigo,
       nombre: producto.nombre,
       id_categoria: producto.id_categoria,
@@ -46,11 +57,11 @@ const ProductoFormulario = () => {
       iva: producto.iva,
       estado: producto.estado,
     };
-    console.log(data);
-    const responde = await APIInvoke.invokePOST(`/api/productos/save`, data);
-    const mensaje = responde.msg; // mensaje que se coloca res.json() esta en el controller
-    console.log(mensaje)
-    if (mensaje !== "El producto fue guardado exitosamente") {
+    const responde = await APIInvoke.invokePUT(`/api/productos/editar/${idProducto}`, data);
+    const idprod = responde.msg; // mesaje que fue colocado en controller en donde dice res.json()
+
+  
+    if (idprod !== "El producto se actualizo correctamente") {
       const msg = "El producto  no fue creado";
       Swal.fire({
         icon: 'error',
@@ -65,27 +76,17 @@ const ProductoFormulario = () => {
         title: 'Confirmación',
         text: msg,
       });
-
+      navigate("/productos")
     }
-    setProducto({
-      id: "",
-      codigo: "",
-      nombre: "",
-      id_categoria: "",
-      descripcion: "",
-      valor: "",
-      iva: "",
-      estado: "",
-    });
   };
 
   useEffect(() => {
-    document.getElementById("id").focus();
+    document.getElementById("nombre").focus();
   }, []);
 
   const onSubmit = (e) => {
     e.preventDefault();
-    crearProducto();
+    editarProducto();
   };
 
   return (
@@ -95,11 +96,10 @@ const ProductoFormulario = () => {
 
       <div className="content-wrapper">
         <ContentHeader
-          titulo={"Agregar Productos"}
+          titulo={"Editar Productos"}
           breadCrumb1={"Listado"}
           breadCrumb2={"Agregar"}
           ruta={"/productos"}
-          
         />
 
         <section className="content">
@@ -108,23 +108,10 @@ const ProductoFormulario = () => {
               <div className="col-md-6">
                 <div className="card card-primary">
                   <div className="card-header">
-                    <h3 className="card-title">Agregar Productos</h3>
+                    <h3 className="card-title">Editar Productos</h3>
                   </div>
                   <form onSubmit={onSubmit}>
                     <div className="card-body">
-                      <div className="form-group">
-                        <label htmlFor="Id">Id:</label>
-                        <input
-                          type="text"
-                          className="form-control"
-                          id="id"
-                          name="id"
-                          value={id}
-                          onChange={onChange}
-                          placeholder="IdLocal"
-                          required
-                        />
-                      </div>
 
                       <div className="form-group">
                         <label htmlFor="codigo">Codigo:</label>
@@ -245,4 +232,4 @@ const ProductoFormulario = () => {
   );
 };
 
-export default ProductoFormulario;
+export default ProductoEditar;
