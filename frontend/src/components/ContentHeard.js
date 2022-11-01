@@ -15,6 +15,7 @@ const ContentHeader = ({titulo, breadCrumb1, breadCrumb2, ruta}) => {
                 <Link to={ruta}>{breadCrumb1}</Link>
               </li>
               <li className="breadcrumb-item active">{breadCrumb2}</li>
+              
             </ol>
           </div>
         </div>
