@@ -18,6 +18,21 @@ class APIInvoke {
     }
 
 
+    async invokePOST(resource, body) {
+
+        const data = {
+            method: 'POST',
+            body: JSON.stringify(body),
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        }
+        const url = `${config.api.baseURL}${resource}`
+        let response = (await (await fetch(url, data)).json())
+        return response
+    }
+
+
     async invokeDELETE(resource) {
 
         const data = {
@@ -31,7 +46,19 @@ class APIInvoke {
         return response
     }
 
+    async invokePUT(resource, body) {
 
+        const data = {
+            method: 'PUT',
+            body: JSON.stringify(body),
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        }
+        const url = `${config.api.baseURL}${resource}`
+        let response = (await (await fetch(url, data)).json())
+        return response
+    }
 }
 
 export default new APIInvoke()

@@ -30,12 +30,12 @@ const Narbar = () => {
           </Link>
         </li>
         <li className="nav-item d-none d-sm-inline-block" >
-          <Link to={"#"} className="nav-link">
+          <Link to={"/login"} className="nav-link">
             Login
           </Link>
         </li>
         <li className="nav-item d-none d-sm-inline-block" >
-          <Link to={"#"} className="nav-link" >
+          <Link to={"/crearcuenta"} className="nav-link" >
             CrearUsuario
           </Link>
         </li>

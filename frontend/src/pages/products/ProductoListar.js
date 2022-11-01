@@ -16,7 +16,6 @@ const ProductoListar = () => {
 
   const listaProductosdos = async () => {
     const response = await APIInvoke.invokeGET(`/api/productos/listar`);
-    console.log(response.productos);
     setdataProductos(response.productos);
   };
 
@@ -64,7 +63,6 @@ const ProductoListar = () => {
   };
 
   //Refrescar la pagina 
-
   useEffect(() => {
     listaProductosdos();
   }, []);
@@ -82,12 +80,13 @@ const ProductoListar = () => {
           ruta={"/"}
         />
 
+        {/* Contenido de la pagina  */}
         <section className="content">
           <div className="card">
             <div className="card-header">
               <h3 className="card-title">
                 <Link
-                  to={"/agregarproductos"}
+                  to={"/productosagregar"}
                   type="button"
                   className="btn btn-block btn-primary btn-sm"
                 >
@@ -117,18 +116,20 @@ const ProductoListar = () => {
               <table className="table table-bordered">
                 <thead>
                   <tr>
-                  <th style={{ width: "4%" }}>Id</th>
+                    <th style={{ width: "2%" }}>#</th>
+                    <th style={{ width: "4%" }}>Id</th>
                     <th style={{ width: "4%" }}>Codigo</th>
                     <th style={{ width: "15%" }}>Nombre</th>
                     <th style={{ width: "5%" }}>Categoria</th>
                     <th style={{ width: "4%" }}>Valor</th>
                     <th style={{ width: "15%" }}>Descripción</th>
-                    <th style={{ width: "5%" }}>Opciones</th>
+                    <th style={{ width: "6%" }}>Opciones</th>
                   </tr>
                 </thead>
                 <tbody>
-                  {dataProductos.map((item) => (
+                  {dataProductos.map((item, index) => (
                     <tr key={item._id}>
+                      <td>{index + 1}</td>
                     <td>{item.id}</td>
                       <td>{item.codigo}</td>
                       <td>{item.nombre}</td>
@@ -137,7 +138,7 @@ const ProductoListar = () => {
                       <td>{item.descripcion}</td>
                       <td>
                         <Link
-                          to={`/editarproductos/${item._id}@${item.codigo}@${item.nombre}@${item.categoria}@${item.descripcion}@${item.valor}`}
+                          to={`/productoseditar/${item.id}@${item.codigo}@${item.nombre}@${item.id_categoria}@${item.descripcion}@${item.valor}@${item.iva}@${item.estado}`}
                           className="btn btn-sm btn-primary"
                         >
                           Editar
@@ -157,6 +158,9 @@ const ProductoListar = () => {
             </div>
           </div>
         </section>
+
+         {/* Fin contenido de la pagina  */}
+
       </div>
       <Footer></Footer>
     </div>
