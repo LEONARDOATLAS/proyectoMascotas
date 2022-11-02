@@ -38,8 +38,8 @@ const Login = () => {
       const data = {
         email: usuario.email,
         password: usuario.password
-       
       }
+
       const response = await APIInvoke.invokePOST('/api/auth', data);
       const mensaje = response.msg;
 
@@ -123,6 +123,11 @@ const Login = () => {
                 </button>
                 <Link to={"/crearcuenta"} className="btn btn-block btn-danger">
                   Crear Cuenta
+                </Link>
+              </div>
+              <div>
+              <Link to={"/"} className="btn btn-block btn-secondary">
+                  Inicio
                 </Link>
               </div>
             </form>
