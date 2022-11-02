@@ -83,7 +83,7 @@ const CrearCuenta = () =>{
         <div className="login-box">
           <div className="login-logo">
             <Link to={"#"}>
-              <b>Crear</b>Cuenta
+              <b>Crear Cuenta</b>
             </Link>
           </div>
           <div className="card">

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
+import './auth.css'
 
 import APIInvoke from "../../utils/APIInvoke";
 
@@ -73,7 +74,7 @@ const Login = () => {
       <div className="login-box">
         <div className="login-logo">
           <Link to={"#"}>
-            <b>Iniciar</b>Sesión
+            <b>Iniciar Sesión</b>
           </Link>
         </div>
         <div className="card">
@@ -118,7 +119,7 @@ const Login = () => {
               </div>
 
               <div className="social-auth-links text-center mb-3">
-                <button type="submit" className="btn btn-block btn-primary">
+                <button type="submit" className="btn btn-block btn-success">
                   Ingresar
                 </button>
                 <Link to={"/crearcuenta"} className="btn btn-block btn-danger">
