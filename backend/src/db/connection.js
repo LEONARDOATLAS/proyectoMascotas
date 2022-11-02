@@ -1,14 +1,16 @@
 const mongoose = require('mongoose')
-mongoose.connect("mongodb://localhost:27017/tiendaMascotasgrupo")
+require("dotenv").config({path: "variables.env"});
 
-const myConnection = mongoose.connection;
+const conectarBD = async() => {
+    try { await mongoose.connect(process.env.DB_MONGO,{
+            useNewUrlParser: true,
+            useUnifiedTopology: true,
+        });
+        console.log("Base de datos Conectada....")
+    } catch (error) {
+        console.log(error)
+        process.exit(1);  
+    }
+};
 
-myConnection.on('connected', () => {
-    console.log('Conexión exitosa a la db!')
-});
-
-myConnection.on('error', () => {
-    console.log('Error en la conexión con MongoDB')
-});
-
-module.exports = mongoose
+module.exports = conectarBD;
