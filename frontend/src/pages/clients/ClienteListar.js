@@ -7,7 +7,7 @@ import Footer from '../../components/Footer';
 import Narbar from '../../components/Narvar';
 import SidebarContainer from '../../components/SidebarContainer';
 
-import APIInvoke from "../.../utils/APIInvoke";
+import APIInvoke from "../../utils/APIInvoke";
 
 const ClienteListar = () => {
 
@@ -45,8 +45,7 @@ const ClienteListar = () => {
           'Se elimino el cliente seleccionado.',
           'exitoso'
         )
-        APIInvoke.invokeDELETE(`/api/clientes/delete/${idCliente}`
-        );
+        APIInvoke.invokeDELETE(`/api/clientes/delete/${idCliente}`);
         listaClientesprueba()
       } else if (
         /* Read more about handling dismissals below */
@@ -83,7 +82,7 @@ return (
           <div className="card-header">
             <h3 className="card-title">
               <Link
-                to={"/productosagregar"}
+                to={"/clientesagregar"}
                 type="button"
                 className="btn btn-block btn-primary btn-sm"
               >
@@ -116,9 +115,10 @@ return (
                   <th style={{ width: "2%" }}>#</th>
                   <th style={{ width: "4%" }}>Id</th>
                   <th style={{ width: "15%" }}>Nombre</th>
-                  <th style={{ width: "5%" }}>Dirección</th>
-                  <th style={{ width: "4%" }}>telefono</th>
+                  <th style={{ width: "25%" }}>Dirección</th>
+                  <th style={{ width: "6%" }}>telefono</th>
                   <th style={{ width: "15%" }}>correo</th>
+                  <th style={{ width: "8%" }}>Acciones</th>
                 </tr>
               </thead>
               <tbody>

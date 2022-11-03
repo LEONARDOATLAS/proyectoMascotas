@@ -44,6 +44,14 @@ const MenuContainer = () => {
             </p>
           </Link>
         </li>
+        <li className="nav-item">
+          <Link to={"/clientes"} className="nav-link">
+            <i className="nav-icon fa fa-users" />
+            <p>
+              Clientes
+            </p>
+          </Link>
+        </li>
 
 
         <li className="nav-item">
