@@ -8,7 +8,7 @@ const SidebarContainer = () => {
     <aside className="main-sidebar sidebar-dark-primary elevation-4">
       <Link to={"/"} className="brand-link">
         <img
-          src="dist/img/AdminLTELogo.png"
+          src="dist/img/patamacha.png"
           alt=""
           className="brand-image img-circle elevation-3"
           style={{ opacity: ".8" }}
