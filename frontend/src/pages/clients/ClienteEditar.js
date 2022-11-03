@@ -170,7 +170,7 @@ const ClienteEditar = () => {
                         Guardar
                       </button>
                       &nbsp;&nbsp;
-                      <Link to={"/productos"} className="btn btn-sm btn-secondary">Regresar</Link>
+                      <Link to={"/clientes"} className="btn btn-sm btn-secondary">Regresar</Link>
                       </div>
                     </div>
                   </form>

@@ -45,7 +45,7 @@ const ClienteListar = () => {
           'Se elimino el cliente seleccionado.',
           'exitoso'
         )
-        APIInvoke.invokeDELETE(`/api/clientes/delete/${idCliente}`);
+        APIInvoke.invokeDELETE(`/api/clientes/eliminar/${idCliente}`);
         listaClientesprueba()
       } else if (
         /* Read more about handling dismissals below */
