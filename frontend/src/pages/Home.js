@@ -63,13 +63,98 @@ const Home = () => {
           <div className="row">
             <div className="col-lg-7 connectedSortable ui-sortable">
 
-            <button className="btn btn-lg btn-primary">Lado izquierdo</button>
+            
+
+                <div className="col-md-6">
+                  {/* USERS LIST */}
+                  <div className="card">
+                    <div className="card-header">
+                      <h3 className="card-title">Listado de Desarrolladores</h3>
+                      <div className="card-tools">
+                        <span className="badge badge-danger">5 Integrantes</span>
+                        <button type="button" className="btn btn-tool" data-card-widget="collapse">
+                          <i className="fas fa-minus" />
+                        </button>
+                        <button type="button" className="btn btn-tool" data-card-widget="remove">
+                          <i className="fas fa-times" />
+                        </button>
+                      </div>
+                    </div>
+                    {/* /.card-header */}
+                    
+                        <div className="card-body p-1">
+                          <ul className="users-list clearfix">
+                            <li>
+                              <img src="dist/img/user1-128x128.jpg" alt="User Image" />
+                              <a className="users-list-name" href="#">Leonardo</a>
+                              <span className="users-list-date">Frontend</span>
+                            </li>
+                            <li>
+                              <img src="dist/img/user8-128x128.jpg" alt="User Image" />
+                              <a className="users-list-name" href="#">Andres</a>
+                              <span className="users-list-date">Yesterday</span>
+                            </li>
+                            <li>
+                              <img src="dist/img/user7-128x128.jpg" alt="User Image" />
+                              <a className="users-list-name" href="#">Alison</a>
+                              <span className="users-list-date">Frontend</span>
+                            </li>
+                            <li>
+                              <img src="dist/img/user6-128x128.jpg" alt="User Image" />
+                              <a className="users-list-name" href="#">Fronsualt</a>
+                              <span className="users-list-date">Backend</span>
+                            </li>
+                            <li>
+                              <img src="dist/img/user2-160x160.jpg" alt="User Image" />
+                              <a className="users-list-name" href="#">Camilo</a>
+                              <span className="users-list-date">Backend</span>
+                            </li>
+                          </ul>
+                        </div>
+                  
+                    <div className="card-footer text-center">
+                      <a href="javascript:">Información Desarrolladores</a>
+                    </div>
+                  </div>
+                </div>
+
+
            
             </div>
             <div className="col-lg-5 connectedSortable ui-sortable derecho">
 
-            <button className="btn btn-lg btn-secondary">Lado derecho</button>
 
+            <div className="card-body p-1">
+            </div>
+
+
+                {/* CARRUSEL DE IMAGENES */}
+                <div className="row">
+                <div className="product col-xs-10 col-sm-6 col-md-4 ">
+                  <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
+                    <div className="carousel-inner">
+                      <div className="carousel-item active">
+                        <img src="dist/img/products/purina.png" className="d-block w-100"  alt="..." />
+                      </div>
+                      <div className="carousel-item">
+                        <img src=".../" className="d-block w-100" alt="..." />
+                      </div>
+                      <div className="carousel-item">
+                        <img src="dist/img/products/purina.png" className="d-block w-100" alt="..." />
+                      </div>
+                    </div>
+                    <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                      <span className="carousel-control-prev-icon" aria-hidden="true" />
+                      <span className="visually-hidden">Previous</span>
+                    </button>
+                    <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                      <span className="carousel-control-next-icon" aria-hidden="true" />
+                      <span className="visually-hidden">Next</span>
+                    </button>
+                  </div>
+                  </div>
+
+                  </div>
             </div>
           </div>
         </section>

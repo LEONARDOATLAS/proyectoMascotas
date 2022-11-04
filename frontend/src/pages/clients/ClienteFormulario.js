@@ -146,7 +146,7 @@ const ClienteFormulario = () => {
                       </div>
 
                     <div className="row">
-                      <div className="form-group">
+                      <div className="form-group col-md-5">
                         <label htmlFor="txtdescripcion">Telefono</label>
                         <input
                           type="number"
@@ -160,7 +160,7 @@ const ClienteFormulario = () => {
                         />
                       </div>
 
-                        <div className="form-group col-md-3">
+                        <div className="form-group col-md-7">
                           <label htmlFor="txtvalor">Correo</label>
                           <input
                             type="text"
@@ -178,11 +178,11 @@ const ClienteFormulario = () => {
                     </div>
                     <div className="card-footer">
                       <div className="row">
-                      <button type="submit" className="btn btn-primary">
+                      <button type="submit" className="btn btn-outline-primary col-md-3">
                         Guardar
                       </button>
                       &nbsp;&nbsp;
-                      <Link to={"/clientes"} className="btn btn-sm btn-secondary">Regresar</Link>
+                      <Link to={"/clientes"} className="btn btn-sm btn-outline-secondary col-md-3 ">Regresar</Link>
                       </div>
                     </div>
                   </form>

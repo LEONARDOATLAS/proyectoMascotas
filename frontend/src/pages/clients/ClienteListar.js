@@ -13,7 +13,7 @@ const ClienteListar = () => {
 
     const [dataClientes, setdataClientes] = useState([]);
 
-    const listaClientesprueba = async () => {
+    const listaClientes = async () => {
         const response = await APIInvoke.invokeGET(`/api/clientes/listar`);
         setdataClientes(response.clientes);
     };
@@ -45,8 +45,9 @@ const ClienteListar = () => {
           'Se elimino el cliente seleccionado.',
           'exitoso'
         )
-        APIInvoke.invokeDELETE(`/api/clientes/eliminar/${idCliente}`);
-        listaClientesprueba()
+        APIInvoke.invokeDELETE(`/api/clientes/eliminar/${idCliente}`
+        );
+        listaClientes()
       } else if (
         /* Read more about handling dismissals below */
         result.dismiss === Swal.DismissReason.cancel
@@ -60,7 +61,7 @@ const ClienteListar = () => {
 };
 //Refrescar la pagina 
 useEffect(() => {
-  listaClientesprueba();
+  listaClientes();
 }, []);
 
 return (
@@ -84,7 +85,7 @@ return (
               <Link
                 to={"/clientesagregar"}
                 type="button"
-                className="btn btn-block btn-primary btn-sm"
+                className="btn btn-block btn-outline-primary btn-sm-4"
               >
                 Agregar nuevo
               </Link>

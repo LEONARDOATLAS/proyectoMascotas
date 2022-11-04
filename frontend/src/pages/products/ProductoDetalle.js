@@ -66,26 +66,10 @@ const ProductoDetalle = () => {
                         $1500.00
                       </h2>
                       <h4 className="mt-0">
-                        <small>Ex Tax: $80.00 </small>
+                        <small>Descuentos: $80.00 </small>
                       </h4>
                     </div>
                     <div className="mt-4">
-                      
-                      
-                    </div>
-                    <div className="mt-4 product-share">
-                      <Link href="#" className="text-gray">
-                        <i className="fab fa-facebook-square fa-2x" />
-                      </Link>
-                      <Link href="#" className="text-gray">
-                        <i className="fab fa-twitter-square fa-2x" />
-                      </Link>
-                      <Link href="#" className="text-gray">
-                        <i className="fas fa-envelope-square fa-2x" />
-                      </Link>
-                      <Link href="#" className="text-gray">
-                        <i className="fas fa-rss-square fa-2x" />
-                      </Link>
                     </div>
                   </div>
 
@@ -95,9 +79,9 @@ const ProductoDetalle = () => {
               <div className="row mt-4">
                 <nav className="w-100">
                   <div className="nav nav-tabs" id="product-tab" role="tablist">
-                    <a className="nav-item nav-link active" id="product-desc-tab" data-toggle="tab" href="#product-desc" role="tab" aria-controls="product-desc" aria-selected="true">Description</a>
-                    <a className="nav-item nav-link" id="product-comments-tab" data-toggle="tab" href="#product-comments" role="tab" aria-controls="product-comments" aria-selected="false">Comments</a>
-                    <a className="nav-item nav-link" id="product-rating-tab" data-toggle="tab" href="#product-rating" role="tab" aria-controls="product-rating" aria-selected="false">Rating</a>
+                    <a className="nav-item nav-link active" id="product-desc-tab" data-toggle="tab" href="#product-desc" role="tab" aria-controls="product-desc" aria-selected="true">Descripción</a>
+                    <a className="nav-item nav-link" id="product-comments-tab" data-toggle="tab" href="#product-comments" role="tab" aria-controls="product-comments" aria-selected="false">Comentarios</a>
+                    <a className="nav-item nav-link" id="product-rating-tab" data-toggle="tab" href="#product-rating" role="tab" aria-controls="product-rating" aria-selected="false">Clasificación</a>
                   </div>
                 </nav>
                 <div className="tab-content p-3" id="nav-tabContent">

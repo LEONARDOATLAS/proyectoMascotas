@@ -7,13 +7,7 @@ const MenuContainer = () => {
 
   return (
     <nav className="mt-2">
-      <ul
-        className="nav nav-pills nav-sidebar flex-column"
-        data-widget="treeview"
-        role="menu"
-        data-accordion="false"
-      >
-
+      <ul className="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
         <li className="nav-item">
           <Link to={"/"} className="nav-link">
             <i className="nav-icon fa fa-home" />
@@ -33,25 +27,56 @@ const MenuContainer = () => {
             </p>
           </Link>
         </li>
-      {/* Para iniciar el Menu de Productos */}
+
+            {/* Para iniciar el Menu de Productos */}
 
 
-        <li className="nav-item">
-          <Link to={"/productos"} className="nav-link">
-            <i className="nav-icon fa fa-tasks" />
-            <p>
-              Productos
-            </p>
-          </Link>
-        </li>
-        <li className="nav-item">
-          <Link to={"/clientes"} className="nav-link">
-            <i className="nav-icon fa fa-users" />
-            <p>
-              Clientes
-            </p>
-          </Link>
-        </li>
+          <li className="nav-item">
+            <Link to={"/productos"} className="nav-link">
+              <i className="nav-icon fa fa-tasks" />
+              <p>
+                Productos
+              </p>
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link to={"/clientes"} className="nav-link">
+              <i className="nav-icon fa fa-users" />
+              <p>
+                Clientes
+              </p>
+            </Link>
+          </li>
+
+            <li className="nav-item">
+            <a href="#" className="nav-link">
+              <i className="nav-icon fas fa-university" />
+              <p>
+                Ventas
+                <i className="fas fa-angle-left right" />
+              </p>
+            </a>
+            <ul className="nav nav-treeview">
+              <li className="nav-item">
+                <a href="pages/tables/simple.html" className="nav-link">
+                  <i className="far fa-circle nav-icon" />
+                  <p>Factura</p>
+                </a>
+              </li>
+              <li className="nav-item">
+                <a href="pages/tables/data.html" className="nav-link">
+                  <i className="far fa-circle nav-icon" />
+                  <p>Pedidos</p>
+                </a>
+              </li>
+              <li className="nav-item">
+                <a href="pages/tables/jsgrid.html" className="nav-link">
+                  <i className="far fa-circle nav-icon" />
+                  <p>pendiente</p>
+                </a>
+              </li>
+            </ul>
+          </li>
 
 
       </ul>

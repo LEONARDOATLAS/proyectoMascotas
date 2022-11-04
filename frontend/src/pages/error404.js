@@ -29,7 +29,7 @@ const Error404 = () => {
     <div className="error-content">
       <h3><i className="fas fa-exclamation-triangle text-warning" /> Oops! La Pagina no Funciona</h3>
       <p>
-      No pudimos encontrar la página que estabas buscando. Mientras tanto, puede volver al <Link to={"/"}> panel de control </Link>o intentar usar el formulario de búsqueda.
+      Lo siento no pudimos encontrar la página que estabas buscando. Mientras tanto, puede volver al <Link to={"/"}> panel de control </Link>o intentar usar el formulario de búsqueda.
       </p>
       <form className="search-form">
         <div className="input-group">
