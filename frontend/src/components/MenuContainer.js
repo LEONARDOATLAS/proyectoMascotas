@@ -49,19 +49,19 @@ const MenuContainer = () => {
           </li>
 
             <li className="nav-item">
-            <a href="#" className="nav-link">
+            <Link href="#" className="nav-link">
               <i className="nav-icon fas fa-university" />
               <p>
                 Ventas
                 <i className="fas fa-angle-left right" />
               </p>
-            </a>
+            </Link>
             <ul className="nav nav-treeview">
               <li className="nav-item">
-                <a href="pages/tables/simple.html" className="nav-link">
+                <Link href="pages/tables/simple.html" className="nav-link">
                   <i className="far fa-circle nav-icon" />
                   <p>Factura</p>
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
                 <a href="pages/tables/data.html" className="nav-link">

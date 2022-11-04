@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import ContentHeader from "../../components/ContentHeard";
 import Footer from "../../components/Footer";
 import Narbar from "../../components/Narvar";
@@ -8,8 +7,6 @@ import SidebarContainer from "../../components/SidebarContainer";
 import "../css/productos.css"
 
 const ProductoDetalle = () => {
-
-
 
   return (
     <div className="wrapper">
