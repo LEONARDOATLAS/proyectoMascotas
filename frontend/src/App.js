@@ -12,6 +12,7 @@ import Login from './pages/auth/Login';
 import ClienteListar from './pages/clients/ClienteListar';
 import ClienteFormulario from './pages/clients/ClienteFormulario';
 import ClienteEditar from './pages/clients/ClienteEditar';
+import ProductoDetalle from './pages/products/ProductoDetalle';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/productos" exact element={<ProductoListar />} />
         <Route path="/productosagregar" exact element={<ProductoFormulario />} />
         <Route path="/productoseditar/:idproducto" exact element={<ProductoEditar />} />
+        <Route path="/productosdetalle" exact element={<ProductoDetalle />} />
         <Route path="/clientes" exact element={<ClienteListar />} />
         <Route path="/clientesagregar" exact element={<ClienteFormulario />} />
         <Route path="/clienteseditar/:idcliente" exact element={<ClienteEditar />} />

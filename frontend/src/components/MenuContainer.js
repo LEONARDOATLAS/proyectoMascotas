@@ -54,16 +54,6 @@ const MenuContainer = () => {
         </li>
 
 
-        <li className="nav-item">
-          <a href="../widgets.html" className="nav-link">
-            <i className="nav-icon fa fa-plus-square" />
-            <p>
-              Pedidos
-            </p>
-          </a>
-        </li>
-
-
       </ul>
     </nav>
   );

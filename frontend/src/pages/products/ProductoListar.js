@@ -123,7 +123,7 @@ const ProductoListar = () => {
                     <th style={{ width: "5%" }}>Categoria</th>
                     <th style={{ width: "4%" }}>Valor</th>
                     <th style={{ width: "15%" }}>Descripción</th>
-                    <th style={{ width: "6%" }}>Opciones</th>
+                    <th style={{ width: "12%" }}>Opciones</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -150,6 +150,9 @@ const ProductoListar = () => {
                         >
                           Eliminar
                         </button>
+                        <Link to={"/productosdetalle"} className="btn btn-sm btn-secondary">
+                        Mas Detalles
+                        </Link>
                       </td>
                     </tr>
                   ))}
