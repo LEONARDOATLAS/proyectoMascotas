@@ -13,6 +13,7 @@ import ClienteListar from './pages/clients/ClienteListar';
 import ClienteFormulario from './pages/clients/ClienteFormulario';
 import ClienteEditar from './pages/clients/ClienteEditar';
 import ProductoDetalle from './pages/products/ProductoDetalle';
+import Error404 from './pages/error404';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
         <Route path="/clientes" exact element={<ClienteListar />} />
         <Route path="/clientesagregar" exact element={<ClienteFormulario />} />
         <Route path="/clienteseditar/:idcliente" exact element={<ClienteEditar />} />
+        <Route path="*" exact element={<Error404 />}/>
       </Routes>
     </Router>
    </Fragment>
