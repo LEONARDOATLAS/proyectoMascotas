@@ -226,11 +226,11 @@ const ProductoFormulario = () => {
                     </div>
                     <div className="card-footer">
                       <div className="row">
-                      <button type="submit" className="btn btn-primary">
+                      <button type="submit" className="col-sm-3 btn btn-outline-primary">
                         Guardar
                       </button>
                       &nbsp;&nbsp;
-                      <Link to={"/productos"} className="btn btn-sm btn-secondary">Regresar</Link>
+                      <Link to={"/productos"} className="col-sm-3 btn btn-sm btn-outline-secondary">Regresar</Link>
                       </div>
                     </div>
                   </form>

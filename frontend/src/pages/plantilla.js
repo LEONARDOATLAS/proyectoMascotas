@@ -15,17 +15,26 @@ const Plantilla = () => {
       <Narbar></Narbar>
       <SidebarContainer></SidebarContainer>
 
-      <div className="content-wrapper">
-        <ContentHeader
-          titulo={"Plantilla"}
-          breadCrumb1={"Inicio"}
-          breadCrumb2={"Agregar"}
-          ruta={"/"}
-        />
+      {/* INICIO DEL CONTENIDO DE LA PAGINA  */}
+          <div className="content-wrapper">
+            <ContentHeader
+              titulo={"Plantilla"}
+              breadCrumb1={"Inicio"}
+              breadCrumb2={"Agregar"}
+              ruta={"/"}
+            />
+
+             {/* INICIO CONTENIDO INTERNO DE LA PAGINA  */}
 
 
 
-      </div>
+
+             {/* FIN CONTENIDO INTERNO DE LA PAGINA  */}
+
+
+
+          </div>
+       {/* FIN DEL CONTENIDO DE LA PAGINA  */}
       <Footer></Footer>
     </div>
   );

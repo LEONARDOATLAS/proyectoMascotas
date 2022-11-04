@@ -7,7 +7,7 @@ const auth = require("../middleware/auth")
 const controllerprofesor = require('../controllers/ControllerProfesor');
 router.get("/listardos", controllerprofesor)
 
-router.get("/listar", auth, productController.productoListar);
+router.get("/listar", productController.productoListar);
 router.post("/save", productController.productoAgregar)
 router.get("/listar/:id", productController.listarProductoId)
 router.put("/editar/:id", productController.productoEditar)

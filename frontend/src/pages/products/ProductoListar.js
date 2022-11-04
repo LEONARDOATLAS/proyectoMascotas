@@ -88,7 +88,7 @@ const ProductoListar = () => {
                 <Link
                   to={"/productosagregar"}
                   type="button"
-                  className="btn btn-block btn-primary btn-sm"
+                  className="btn btn-block btn-outline-primary btn-sm-4"
                 >
                   Agregar nuevo
                 </Link>
@@ -123,7 +123,7 @@ const ProductoListar = () => {
                     <th style={{ width: "5%" }}>Categoria</th>
                     <th style={{ width: "4%" }}>Valor</th>
                     <th style={{ width: "15%" }}>Descripción</th>
-                    <th style={{ width: "6%" }}>Opciones</th>
+                    <th style={{ width: "12%" }}>Opciones</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -148,8 +148,12 @@ const ProductoListar = () => {
                           onClick={(e) => eliminarProducto(e, item.id)}
                           className="btn btn-sm btn-danger"
                         >
+                          <i class="fa fa-trash" aria-hidden="true"></i>
                           Eliminar
                         </button>
+                        <Link to={"/productosdetalle"} className="btn btn-sm btn-outline-secondary">
+                        Mas Detalles
+                        </Link>
                       </td>
                     </tr>
                   ))}
