@@ -85,35 +85,35 @@ const Home = () => {
                         <div className="card-body p-1">
                           <ul className="users-list clearfix">
                             <li>
-                              <img src="dist/img/user1-128x128.jpg" alt="User Image" />
-                              <a className="users-list-name" href="#">Leonardo</a>
+                              <img src="dist/img/user1-128x128.jpg" alt="" />
+                              <Link className="users-list-name" href="#">Leonardo</Link>
                               <span className="users-list-date">Frontend</span>
                             </li>
                             <li>
-                              <img src="dist/img/user8-128x128.jpg" alt="User Image" />
-                              <a className="users-list-name" href="#">Andres</a>
+                              <img src="dist/img/user8-128x128.jpg" alt="" />
+                              <Link className="users-list-name" href="#">Andres</Link>
                               <span className="users-list-date">Yesterday</span>
                             </li>
                             <li>
-                              <img src="dist/img/user7-128x128.jpg" alt="User Image" />
-                              <a className="users-list-name" href="#">Alison</a>
+                              <img src="dist/img/user7-128x128.jpg" alt="" />
+                              <Link className="users-list-name" href="#">Alison</Link>
                               <span className="users-list-date">Frontend</span>
                             </li>
                             <li>
-                              <img src="dist/img/user6-128x128.jpg" alt="User Image" />
-                              <a className="users-list-name" href="#">Fronsualt</a>
+                              <img src="dist/img/user6-128x128.jpg" alt="" />
+                              <Link className="users-list-name" to={"#"}>Fronsualt</Link>
                               <span className="users-list-date">Backend</span>
                             </li>
                             <li>
-                              <img src="dist/img/user2-160x160.jpg" alt="User Image" />
-                              <a className="users-list-name" href="#">Camilo</a>
+                              <img src="dist/img/user2-160x160.jpg" alt="" />
+                              <Link className="users-list-name" href="#">Camilo</Link>
                               <span className="users-list-date">Backend</span>
                             </li>
                           </ul>
                         </div>
                   
                     <div className="card-footer text-center">
-                      <a href="javascript:">Información Desarrolladores</a>
+                      <Link to={"#"}>Información Desarrolladores</Link>
                     </div>
                   </div>
                 </div>
