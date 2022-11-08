@@ -129,32 +129,32 @@ const ProductoListar = () => {
                 <tbody>
                   {dataProductos.map((item, index) => (
                     <tr key={item._id}>
-                      <td>{index + 1}</td>
-                    <td>{item.id}</td>
-                      <td>{item.codigo}</td>
-                      <td>{item.nombre}</td>
-                      <td>{item.id_categoria}</td>
-                      <td>{item.valor}</td>
-                      <td>{item.descripcion}</td>
-                      <td>
-                        <Link
-                          to={`/productoseditar/${item.id}@${item.codigo}@${item.nombre}@${item.id_categoria}@${item.descripcion}@${item.valor}@${item.iva}@${item.estado}`}
-                          className="btn btn-sm btn-primary"
-                        >
-                          Editar
-                        </Link>
-                        &nbsp;&nbsp;
-                        <button
-                          onClick={(e) => eliminarProducto(e, item.id)}
-                          className="btn btn-sm btn-danger"
-                        >
-                          <i class="fa fa-trash" aria-hidden="true"></i>
-                          Eliminar
-                        </button>
-                        <Link to={"/productosdetalle"} className="btn btn-sm btn-outline-secondary">
-                        Mas Detalles
-                        </Link>
-                      </td>
+                        <td>{index + 1}</td>
+                        <td>{item.id}</td>
+                        <td>{item.codigo}</td>
+                        <td>{item.nombre}</td>
+                        <td>{item.id_categoria}</td>
+                        <td>{item.valor}</td>
+                        <td>{item.descripcion}</td>
+                        <td>
+                          <Link
+                            to={`/productoseditar/${item.id}@${item.codigo}@${item.nombre}@${item.id_categoria}@${item.descripcion}@${item.valor}@${item.iva}@${item.estado}`}
+                            className="btn btn-sm btn-primary"
+                          >
+                            Editar
+                          </Link>
+                          &nbsp;&nbsp;
+                          <button
+                            onClick={(e) => eliminarProducto(e, item.id)}
+                            className="btn btn-sm btn-danger"
+                          >
+                            <i className="fa fa-trash" aria-hidden="true"></i>
+                            Eliminar
+                          </button>
+                          <Link to={"/productosdetalle"} className="btn btn-sm btn-outline-secondary">
+                          Mas Detalles
+                          </Link>
+                        </td>
                     </tr>
                   ))}
                 </tbody>
