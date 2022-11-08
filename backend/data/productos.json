@@ -2,10 +2,11 @@
     {
         "id": 1,
         "codigo": "HU0004",
-        "nombre": "HUESO CARNUDO  ",
+        "nombre": "PURINA FRISKIS  ",
         "id_categoria": 1,
-        "descripcion": "HUESOS CARNUDO DE 150 GRAMOS",
-        "valor": 1500,
+        "descripcion": "PURINA DE MASCOTAS PARA CRECER GRANDE",
+        "urlimagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEjDRRKN9LX2BlLq2Mk2ej9WYUhIuEw3_FVw&usqp=CAU",
+        "valor": 15000,
         "iva": 19,
         "estado": 1
         
@@ -13,9 +14,10 @@
     {
         "id": 2,
         "codigo": "HU0004",
-        "nombre": "HUESO CARNUDO  ",
+        "nombre": "TIENDA DE MASCOSTAS DOS   ",
         "id_categoria": 1,
-        "descripcion": "HUESOS CARNUDO DE 150 GRAMOS",
+        "descripcion": "TIENDA DE MOSCOTAS LA 9 CON BUENA ATENCION ",
+        "urlimagen": "https://www.elheraldo.co/sites/default/files/styles/width_414/public/comercio_mascotas_bienestar_animal_barranquilla.jpg?itok=5JsfBfvE",
         "valor": 1500,
         "iva": 19,
         "estado": 1
@@ -24,9 +26,10 @@
     {
         "id": 3,
         "codigo": "HU0004",
-        "nombre": "HUESO CARNUDO  ",
+        "nombre": "TIENDA DE MOSCOTAS LA 15  ",
         "id_categoria": 2,
-        "descripcion": "HUESOS CARNUDO DE 150 GRAMOS",
+        "descripcion": "LA TIENDA DE LA CALLE 15 LA  MEJOR TIENDA ",
+        "urlimagen": "https://www.plazalaamerica.com/wp-content/uploads/2019/05/PA-MASCOTAS-e1620418117946.jpg",
         "valor": 1500,
         "iva": 19,
         "estado": 1
@@ -35,9 +38,22 @@
     {
         "id": 4,
         "codigo": "HU0004",
+        "nombre": "TIENDA MISIONTIC2022 LA MEJOR  ",
+        "id_categoria": 2,
+        "descripcion": "PRIMERA TIENDA DEL MINISTERIOR TIC2022",
+        "urlimagen": "https://www.plazalaamerica.com/wp-content/uploads/2019/05/PA-MASCOTAS-e1620418117946.jpg",
+        "valor": 1500,
+        "iva": 19,
+        "estado": 1
+        
+    },
+    {
+        "id": 5,
+        "codigo": "HU0004",
         "nombre": "HUESO CARNUDO  ",
         "id_categoria": 2,
         "descripcion": "HUESOS CARNUDO DE 150 GRAMOS",
+        "urlimagen": "https://t2.ea.ltmcdn.com/es/posts/5/0/6/huesos_de_piel_de_vaca_4605_2_600.jpg",
         "valor": 1500,
         "iva": 19,
         "estado": 1
