@@ -16,7 +16,7 @@ export default function Product({product : {id, nombre, valor, urlimagen, descri
             <h5 className="card-title">{nombre}</h5> 
             <h4 className="card-text">Precio: {valor}</h4>
             <p className="card-text">{descripcion}</p>
-            <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+            <i className="fa fa-shopping-basket" aria-hidden="true"></i>
         </div>
         </div>
     </div>

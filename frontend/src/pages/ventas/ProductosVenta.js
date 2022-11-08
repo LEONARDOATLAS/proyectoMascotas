@@ -39,7 +39,7 @@ export default function ProductosVenta(){
               />
             {/* INICIO CONTENIDO INTERNO DE LA PAGINA  */}
 
-            <div className="row row-cols-lg-4">
+            <div className="row row-cols-sm-1 row-cols-md-2 row-cols-lg-4 row-cols-xl-5">
             {
                 dataProductos.map(product =>(
                         <Product key={product.id} product={product} />
