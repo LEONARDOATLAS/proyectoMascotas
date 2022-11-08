@@ -19,6 +19,7 @@ const ProductoEditar = () => {
   const consnombre = arreglo[2];
   const consid_categoria = arreglo[3];
   const consdescripcion = arreglo[4];
+  const consurlimagen = arreglo[9];
   const consvalor = arreglo[5];
   const consiva = arreglo[6]
   const conestado = arreglo[7]
@@ -29,12 +30,13 @@ const ProductoEditar = () => {
     nombre: consnombre,
     id_categoria: consid_categoria,
     descripcion: consdescripcion,
+    urlimagen: consurlimagen,
     valor: consvalor,
     iva: consiva,
     estado: conestado,
   });
 
-  const {codigo, nombre, id_categoria, descripcion, valor, iva, estado } =
+  const {codigo, nombre, id_categoria, descripcion, urlimagen, valor, iva, estado } =
     producto;
 
   const onChange = (e) => {
@@ -53,6 +55,7 @@ const ProductoEditar = () => {
       nombre: producto.nombre,
       id_categoria: producto.id_categoria,
       descripcion: producto.descripcion,
+      urlimagen: producto.urlimagen,
       valor: producto.valor,
       iva: producto.iva,
       estado: producto.estado,
@@ -163,6 +166,20 @@ const ProductoEditar = () => {
                           value={descripcion}
                           onChange={onChange}
                           placeholder="Descripcion"
+                          required
+                        />
+                      </div>
+
+                      <div className="form-group">
+                        <label htmlFor="txtdescripcion">Url_imagen</label>
+                        <input
+                          type="text"
+                          className="form-control"
+                          id="urlimagen"
+                          name="urlimagen"
+                          value={urlimagen}
+                          onChange={onChange}
+                          placeholder="Url_imagen"
                           required
                         />
                       </div>

@@ -14,6 +14,7 @@ import ClienteFormulario from './pages/clients/ClienteFormulario';
 import ClienteEditar from './pages/clients/ClienteEditar';
 import ProductoDetalle from './pages/products/ProductoDetalle';
 import Error404 from './pages/error404';
+import ProductosVenta from './pages/ventas/ProductosVenta';
 
 function App() {
   return (
@@ -31,6 +32,9 @@ function App() {
         <Route path="/clientes" exact element={<ClienteListar />} />
         <Route path="/clientesagregar" exact element={<ClienteFormulario />} />
         <Route path="/clienteseditar/:idcliente" exact element={<ClienteEditar />} />
+
+        {/* RUTAS DE VENTAS */}
+        <Route path="/productosventa" exact element={<ProductosVenta />} />
         <Route path="*" exact element={<Error404 />}/>
       </Routes>
     </Router>

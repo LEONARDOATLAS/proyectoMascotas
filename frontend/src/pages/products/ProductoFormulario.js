@@ -20,12 +20,13 @@ const ProductoFormulario = () => {
     nombre: "",
     id_categoria: "",
     descripcion: "",
+    urlimagen:"",
     valor: "",
     iva: "",
     estado: "",
   });
 
-  const { id, codigo, nombre, id_categoria, descripcion, valor, iva, estado } =
+  const { id, codigo, nombre, id_categoria, descripcion, urlimagen, valor, iva, estado } =
     producto;
 
   const onChange = (e) => {
@@ -42,6 +43,7 @@ const ProductoFormulario = () => {
       nombre: producto.nombre,
       id_categoria: producto.id_categoria,
       descripcion: producto.descripcion,
+      urlimagen: producto.urlimagen,
       valor: producto.valor,
       iva: producto.iva,
       estado: producto.estado,
@@ -73,6 +75,7 @@ const ProductoFormulario = () => {
       nombre: "",
       id_categoria: "",
       descripcion: "",
+      urlimagen: "",
       valor: "",
       iva: "",
       estado: "",
@@ -176,6 +179,20 @@ const ProductoFormulario = () => {
                           value={descripcion}
                           onChange={onChange}
                           placeholder="Descripcion"
+                          required
+                        />
+                      </div>
+
+                      <div className="form-group">
+                        <label htmlFor="txtdescripcion">Url_imagen</label>
+                        <input
+                          type="text"
+                          className="form-control"
+                          id="urlimagen"
+                          name="urlimagen"
+                          value={urlimagen}
+                          onChange={onChange}
+                          placeholder="Url_imagen"
                           required
                         />
                       </div>
