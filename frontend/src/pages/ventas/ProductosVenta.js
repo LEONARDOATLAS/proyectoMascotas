@@ -17,6 +17,8 @@ export default function ProductosVenta(){
       setdataProductos(response.productos);
     };
 
+    console.log("total de productos", dataProductos.length)
+
       //Refrescar la pagina 
     useEffect(() => {
     listaProductosdos();

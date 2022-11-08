@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import Narvar from "../components/Narvar";
@@ -7,7 +7,35 @@ import ContentHeader from "../components/ContentHeard";
 import Footer from "../components/Footer";
 import './css/home.css'
 
+import APIInvoke from "../utils/APIInvoke";
+
 const Home = () => {
+
+
+  const [dataProductos, setdataProductos] = useState([]);
+  const [dataClientes, setdataClientes] = useState([]);
+
+  const listaProductos = async () => {
+    const response = await APIInvoke.invokeGET(`/api/productos/listar`);
+    setdataProductos(response.productos);
+  };
+
+  const listaClientes = async () => {
+      const response = await APIInvoke.invokeGET(`/api/clientes/listar`);
+      setdataClientes(response.clientes);
+  };
+
+ const productos = dataProductos.length;
+ const clientes = dataClientes.length
+
+
+ useEffect(() => {
+  listaProductos();
+  listaClientes();
+}, []);
+
+
+
   return (
     <div className="wrapper">
       <Narvar></Narvar>
@@ -29,14 +57,14 @@ const Home = () => {
               <div className="col-lg-3 col-6">
                 <div className="small-box bg-info">
                   <div className="inner">
-                    <h3>12</h3>
+                    <h3>{productos}</h3>
                     <p>Productos</p>
                   </div>
                   <div className="icon">
                     <i className="ion ion-bag" />
                   </div>
                   <Link to={"/productos"} className="small-box-footer">
-                    Información <i className="fas fa-arrow-circle-right" />
+                    Mas Información <i className="fas fa-arrow-circle-right" />
                   </Link>
                 </div>
               </div>
@@ -44,14 +72,14 @@ const Home = () => {
               <div className="col-lg-3 col-6">
                 <div className="small-box bg-success">
                   <div className="inner">
-                    <h3>150</h3>
-                    <p>New Orders</p>
+                    <h3>{clientes}</h3>
+                    <p>Nuestros Clientes</p>
                   </div>
                   <div className="icon">
                     <i className="ion ion-bag" />
                   </div>
-                  <Link to={"#"} className="small-box-footer">
-                    More info <i className="fas fa-arrow-circle-right" />
+                  <Link to={"/clientes"} className="small-box-footer">
+                    Consultarlos <i className="fas fa-arrow-circle-right" />
                   </Link>
                 </div>
               </div>
