@@ -14,7 +14,6 @@ import ClienteFormulario from './pages/clients/ClienteFormulario';
 import ClienteEditar from './pages/clients/ClienteEditar';
 import ProductoDetalle from './pages/products/ProductoDetalle';
 import Error404 from './pages/error404';
-import Products from './pages/ventas/Products';
 import ProductosVenta from './pages/ventas/ProductosVenta';
 
 function App() {
@@ -35,7 +34,6 @@ function App() {
         <Route path="/clienteseditar/:idcliente" exact element={<ClienteEditar />} />
 
         {/* RUTAS DE VENTAS */}
-        <Route path="/products" exact element={<Products />} />
         <Route path="/productosventa" exact element={<ProductosVenta />} />
         <Route path="*" exact element={<Error404 />}/>
       </Routes>
