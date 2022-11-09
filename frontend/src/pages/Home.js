@@ -133,12 +133,12 @@ const Home = () => {
                   <div className="card-body p-1">
                     <ul className="users-list clearfix">
                       <li>
-                        <img src="dist/img/user1-128x128.jpg" alt="" />
+                        <img src="dist/img/desarrolladores/leonardo.png" alt="" />
                         <Link className="users-list-name" href="#">Leonardo</Link>
                         <span className="users-list-date">Frontend</span>
                       </li>
                       <li>
-                        <img src="dist/img/user8-128x128.jpg" alt="" />
+                        <img src="dist/img/desarrolladores/andres.jpg" alt="" />
                         <Link className="users-list-name" href="#">Andres</Link>
                         <span className="users-list-date">Backend</span>
                       </li>
@@ -148,7 +148,7 @@ const Home = () => {
                         <span className="users-list-date">Frontend</span>
                       </li>
                       <li>
-                        <img src="dist/img/user6-128x128.jpg" alt="" />
+                        <img src="dist/img/desarrolladores/fronsuat.jpg" alt="" />
                         <Link className="users-list-name" to={"#"}>Fransuat</Link>
                         <span className="users-list-date">Backend</span>
                       </li>
@@ -178,25 +178,25 @@ const Home = () => {
                 <div id="carouselExampleSlidesOnly" className="carousel slide" data-bs-ride="carousel">
                   <div className="carousel-inner">
                     <div className="carousel-item active">
-                      <img src="dist/img/PurinaPerros.png" class="d-block w-100 align-content-center" alt="COMIDA DE PERROS"></img>
+                      <img src="dist/img/products/PurinaPerros.png" class="d-block w-100 align-content-center" alt="COMIDA DE PERROS"></img>
                     </div>
                     <div className="carousel-item">
-                      <img src="dist/img/PurinaGatos.png" class="d-block w-100 align-content-center" alt="..."></img>
+                      <img src="dist/img/products/PurinaGatos.png" class="d-block w-100 align-content-center" alt="..."></img>
                     </div>
                     <div className="carousel-item">
-                      <img src="dist/img/JuguetePerro.png" class="d-block w-100 align-content-center" alt="..."></img>
+                      <img src="dist/img/products/JuguetePerro.png" class="d-block w-100 align-content-center" alt="..."></img>
                     </div>
                     <div className="carousel-item">
-                      <img src="dist/img/JugueteGato.png" class="d-block w-100 align-content-center" alt="..."></img>
+                      <img src="dist/img/products/JugueteGato.png" class="d-block w-100 align-content-center" alt="..."></img>
                     </div>
                     <div className="carousel-item">
-                      <img src="dist/img/CorreaPerros.png" class="d-block w-100 align-content-center" alt="..."></img>
+                      <img src="dist/img/products/CorreaPerros.png" class="d-block w-100 align-content-center" alt="..."></img>
                     </div>
                     <div className="carousel-item">
-                      <img src="dist/img/CorreaGatos.png" class="d-block w-100 align-content-center" alt="..."></img>
+                      <img src="dist/img/products/CorreaGatos.png" class="d-block w-100 align-content-center" alt="..."></img>
                     </div>
                     <div className="carousel-item">
-                      <img src="dist/img/HeladoPerros.png" class="d-block w-100 align-content-center" alt="..."></img>
+                      <img src="dist/img/products/HeladoPerros.png" class="d-block w-100 align-content-center" alt="..."></img>
                     </div>
                   </div>
                 </div>
