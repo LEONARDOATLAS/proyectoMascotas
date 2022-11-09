@@ -45,18 +45,18 @@ const ClienteFormulario = () => {
     const mensaje = responde.msg;
     console.log(mensaje)
     if (mensaje !== "El cliente fue guardado exitosamente") {
-      const msg = "El cliente  no fue creado";
-      Swal.fire({
-        icon: 'error',
-        title: 'Error',
-        text: msg,
-      });
-
-    } else {
       const msg = "El cliente fue creado exitosamente..";
       Swal.fire({
         icon: 'success',
         title: 'Confirmación',
+        text: msg,
+      });
+
+    } else {
+      const msg = "El cliente  no fue creado";
+      Swal.fire({
+        icon: 'error',
+        title: 'error',
         text: msg,
       });
 

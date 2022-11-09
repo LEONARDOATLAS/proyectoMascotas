@@ -22,7 +22,7 @@ const ProductoListar = () => {
 
   //Eliminar el el producto
   const eliminarProducto = async (e, idProducto) => {
-    e.preventDefault();
+      e.preventDefault();
 
     const swalWithBootstrapButtons = Swal.mixin({
         customClass: {
