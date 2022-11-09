@@ -97,7 +97,7 @@ const ProductoEditar = () => {
       <Narbar></Narbar>
       <SidebarContainer></SidebarContainer>
 
-      <div className="content-wrapper">
+      <div className="content-wrapper background">
         <ContentHeader
           titulo={"Editar Productos"}
           breadCrumb1={"Listado"}

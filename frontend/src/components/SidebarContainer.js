@@ -6,7 +6,7 @@ import MenuContainer from '../components/MenuContainer'
 const SidebarContainer = () => {
   return (
     <aside className="main-sidebar sidebar-dark-primary elevation-4">
-      <Link to={"/"} className="brand-link">
+      <Link to={"/"} className="brand-link text-decoration-none">
         <img
           src="dist/img/patamacha.png"
           alt=""
@@ -26,7 +26,7 @@ const SidebarContainer = () => {
             />
           </div>
           <div className="info">
-            <Link to={"#"} className="d-block">
+            <Link to={"#"} className="d-block text-decoration-none">
               GRUPO_9
             </Link>
           </div>

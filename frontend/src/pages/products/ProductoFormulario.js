@@ -96,7 +96,7 @@ const ProductoFormulario = () => {
       <Narbar></Narbar>
       <SidebarContainer></SidebarContainer>
 
-      <div className="content-wrapper">
+      <div className="content-wrapper background">
         <ContentHeader
           titulo={"Agregar Productos"}
           breadCrumb1={"Listado"}

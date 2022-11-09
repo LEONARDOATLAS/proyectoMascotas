@@ -32,7 +32,7 @@ export default function ProductosVenta(){
         <SidebarContainer></SidebarContainer>
   
         {/* INICIO DEL CONTENIDO DE LA PAGINA  */}
-            <div className="content-wrapper">
+            <div className="content-wrapper background">
               <ContentHeader
                 titulo={"Productos para la Venta"}
                 breadCrumb1={"Inicio"}
