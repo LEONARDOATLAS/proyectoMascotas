@@ -52,9 +52,13 @@ const Home = () => {
         {/* Inicio del contenido de la pagina  */}
 
         <section>
-          <div className="container">
+          <div className="">
             <div className="row">
-              <div className="col-lg-3 col-6">
+            <div className="col-xs-12 col-md-3 col-lg-3 col-xl-3 ">
+            <img className="logoMision" src="dist/img/misiontic/misionticuis.png" alt="" />
+            </div>
+
+              <div className="col-xs-12 col-md-3 col-lg-3 col-xl-3 ">
                 <div className="small-box bg-info">
                   <div className="inner">
                     <h3>{productos}</h3>
@@ -69,7 +73,7 @@ const Home = () => {
                 </div>
               </div>
 
-              <div className="col-lg-3 col-6">
+              <div className="col-xs-12 col-md-3 col-lg-3 col-xl-3">
                 <div className="small-box bg-success">
                   <div className="inner">
                     <h3>{clientes}</h3>
@@ -83,6 +87,23 @@ const Home = () => {
                   </Link>
                 </div>
               </div>
+
+              <div className="col-xs-12 col-md-3 col-lg-3 col-xl-3">
+                <div className="small-box bg-success">
+                  <div className="inner">
+                    <h3>$150.000.00</h3>
+                    <p>Total de Ventas</p>
+                  </div>
+                  <div className="icon">
+                    <i className="ion ion-bag" />
+                  </div>
+                  <Link to={"/clientes"} className="small-box-footer">
+                    Consultarlos <i className="fas fa-arrow-circle-right" />
+                  </Link>
+                </div>
+              </div>
+
+
             </div>
           </div>
         </section>
