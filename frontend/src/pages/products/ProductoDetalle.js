@@ -1,12 +1,34 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import ContentHeader from "../../components/ContentHeard";
 import Footer from "../../components/Footer";
 import Narbar from "../../components/Narvar";
 import SidebarContainer from "../../components/SidebarContainer";
+import { useParams } from "react-router-dom"
+
+import APIInvoke from "../../utils/APIInvoke";
 
 import "../css/productos.css"
 
 const ProductoDetalle = () => {
+
+
+  const { idproducto } = useParams();
+
+  const [dataProductos, setdataProductos] = useState([]);
+
+  const listaProductos = async () => {
+    const response = await APIInvoke.invokeGET(`/api/productos/listar/${idproducto}`);
+    setdataProductos(response.productos);
+  };
+
+  const productos = dataProductos[0];
+ 
+
+  //Refrescar la pagina 
+  useEffect(() => {
+    listaProductos();
+  }, []);
+
 
   return (
     <div className="wrapper">
@@ -32,13 +54,13 @@ const ProductoDetalle = () => {
                   <div className="col-12 col-sm-6">
                     <h3 className="d-inline-block d-sm-none">Pruina DOG CHOW</h3>
                     <div className="col-12 imagen_producto">
-                      <img src="dist/img/products/purina.png" className="product-image" alt="" />
+                      <img src={productos?.urlimagen} className="product-image" alt="" />
                     </div>
                 </div>
 
                   <div className="col-12 col-sm-6">
-                    <h3 className="my-3">Purina DOG CHOW</h3>
-                    <p>Maíz, Harina de subproductos de pollo, Harina de carne y hueso, Arroz partido, Harina de soya, Grasa animal y/o aceite vegetal estabilizado con antioxidantes (BHT), Trigo, Harina de gluten de maíz, Digesto animal, Inulina, Fibra de soya, Carbonato de Calcio, Fosfato bicálcico, Sal, Zeolita, Arveja deshidratada.</p>
+                    <h3 className="my-3">{productos?.nombre}</h3>
+                    <p>{productos?.descripcion}</p>
                     <hr />
                     <h4>Disponible en bolsa de Color</h4>
                     <div className="btn-group btn-group-toggle" data-toggle="buttons">
@@ -60,7 +82,7 @@ const ProductoDetalle = () => {
                     </div>
                     <div className="bg-gray py-2 px-3 mt-4">
                       <h2 className="mb-0">
-                        $1500.00
+                        {"$ " + new Intl.NumberFormat().format(`${productos?.valor}`)}
                       </h2>
                       <h4 className="mt-0">
                         <small>Descuentos: $80.00 </small>
