@@ -15,6 +15,9 @@ import ClienteEditar from './pages/clients/ClienteEditar';
 import ProductoDetalle from './pages/products/ProductoDetalle';
 import Error404 from './pages/error404';
 import ProductosVenta from './pages/ventas/ProductosVenta';
+import FacturaListar from './pages/factura/FacturaListar';
+import FormularioFactura from './pages/factura/FacturaFormulario';
+import EditarFactura from './pages/factura/FacturaEditar';
 
 function App() {
   return (
@@ -32,6 +35,9 @@ function App() {
         <Route path="/clientes" exact element={<ClienteListar />} />
         <Route path="/clientesagregar" exact element={<ClienteFormulario />} />
         <Route path="/clienteseditar/:idcliente" exact element={<ClienteEditar />} />
+        <Route path="/factura" exact element={<FacturaListar />} />
+        <Route path="/facturaagregar" exact element={<FormularioFactura />} />
+        <Route path="/facturaeditar/:idfactura" exact element={<EditarFactura />} />
 
         {/* RUTAS DE VENTAS */}
         <Route path="/productosventa" exact element={<ProductosVenta />} />
