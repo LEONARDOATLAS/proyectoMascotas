@@ -14,7 +14,7 @@ const ProductoDetalle = () => {
       <SidebarContainer></SidebarContainer>
 
       {/* INICIO DEL CONTENIDO DE LA PAGINA  */}
-      <div className="content-wrapper">
+      <div className="content-wrapper background">
         <ContentHeader
           titulo={"Detalle Producto"}
           breadCrumb1={"Productos"}

@@ -49,7 +49,7 @@ const MenuContainer = () => {
           </li>
           <li className="nav-item">
             <Link to={"/productosventa"} className="nav-link">
-              <i className="nav-icon fa fa-users" />
+              <i className="nav-icon fa fa-shopping-basket" />
               <p>
                 ProductosVenta
               </p>
