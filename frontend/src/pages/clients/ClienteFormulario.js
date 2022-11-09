@@ -84,7 +84,7 @@ const ClienteFormulario = () => {
       <Narbar></Narbar>
       <SidebarContainer></SidebarContainer>
 
-      <div className="content-wrapper">
+      <div className="content-wrapper background">
         <ContentHeader
           titulo={"Agregar Clientes"}
           breadCrumb1={"Listado"}

@@ -72,7 +72,7 @@ const ProductoListar = () => {
       <Narbar></Narbar>
       <SidebarContainer></SidebarContainer>
 
-      <div className="content-wrapper">
+      <div className="content-wrapper background">
         <ContentHeader
           titulo={"Listado de productos"}
           breadCrumb1={"Inicio"}

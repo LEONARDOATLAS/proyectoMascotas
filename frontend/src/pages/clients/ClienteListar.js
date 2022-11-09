@@ -69,7 +69,7 @@ return (
     <Narbar></Narbar>
     <SidebarContainer></SidebarContainer>
 
-    <div className="content-wrapper">
+    <div className="content-wrapper background">
       <ContentHeader
         titulo={"Lista de clientes"}
         breadCrumb1={"Inicio"}
