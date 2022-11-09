@@ -143,7 +143,7 @@ const Home = () => {
                         <span className="users-list-date">Backend</span>
                       </li>
                       <li>
-                        <img src="dist/img/user7-128x128.jpg" alt="" />
+                        <img src="dist/img/iconphoto.jpeg" alt="" />
                         <Link className="users-list-name" href="#">Alison</Link>
                         <span className="users-list-date">Frontend</span>
                       </li>
