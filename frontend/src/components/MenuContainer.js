@@ -66,7 +66,7 @@ const MenuContainer = () => {
             </Link>
             <ul className="nav nav-treeview">
               <li className="nav-item">
-                <Link href="pages/tables/simple.html" className="nav-link">
+                <Link to={"/factura"} className="nav-link">
                   <i className="far fa-circle nav-icon" />
                   <p>Factura</p>
                 </Link>
