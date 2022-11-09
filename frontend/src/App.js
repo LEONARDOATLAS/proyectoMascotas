@@ -28,7 +28,7 @@ function App() {
         <Route path="/productos" exact element={<ProductoListar />} />
         <Route path="/productosagregar" exact element={<ProductoFormulario />} />
         <Route path="/productoseditar/:idproducto" exact element={<ProductoEditar />} />
-        <Route path="/productosdetalle" exact element={<ProductoDetalle />} />
+        <Route path="/productosdetalle/:idproducto" exact element={<ProductoDetalle />} />
         <Route path="/clientes" exact element={<ClienteListar />} />
         <Route path="/clientesagregar" exact element={<ClienteFormulario />} />
         <Route path="/clienteseditar/:idcliente" exact element={<ClienteEditar />} />

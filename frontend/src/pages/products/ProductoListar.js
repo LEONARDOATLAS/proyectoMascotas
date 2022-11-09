@@ -151,7 +151,7 @@ const ProductoListar = () => {
                             <i className="fa fa-trash" aria-hidden="true"></i>
                             Eliminar
                           </button>
-                          <Link to={"/productosdetalle"} className="btn btn-sm btn-outline-secondary">
+                          <Link to={`/productosdetalle/${item.id}`} className="btn btn-sm btn-outline-secondary">
                           Mas Detalles
                           </Link>
                         </td>
