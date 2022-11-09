@@ -53,9 +53,9 @@ const Home = () => {
         <section>
           <div className="">
             <div className="row">
-            <div className="col-xs-12 col-md-3 col-lg-3 col-xl-3 ">
-            <img className="logoMision" src="dist/img/misiontic/misionticuis.png" alt="" />
-            </div>
+              <div className="col-xs-12 col-md-3 col-lg-3 col-xl-3 ">
+                <img className="logoMision" src="dist/img/misiontic/misionticuis.png" alt="" />
+              </div>
 
               <div className="col-xs-12 col-md-3 col-lg-3 col-xl-3 ">
                 <div className="small-box bg-info">
@@ -170,40 +170,40 @@ const Home = () => {
 
             </div>
             <div className="col-lg-3 connectedSortable ui-sortable derecho bg-white border-transparent">
-                {/* CARRUSEL DE IMAGENES */}
-            <div className="col-md-16 w-100 align-content-center">
+              {/* CARRUSEL DE IMAGENES */}
+              <div className="col-md-16 w-100 align-content-center">
                 {/* RECOMENDED PRODUCTS*/}
-                
-              <div id="carouselExampleSlidesOnly" className="carousel slide" data-bs-ride="carousel">
-                <div className="carousel-inner">
-                  <div className="carousel-item active">
-                    <img src="dist/img/PurinaPerros.png" class="d-block w-100 align-content-center" alt="COMIDA DE PERROS"></img>
+
+                <div id="carouselExampleSlidesOnly" className="carousel slide" data-bs-ride="carousel">
+                  <div className="carousel-inner">
+                    <div className="carousel-item active">
+                      <img src="dist/img/PurinaPerros.png" class="d-block w-100 align-content-center" alt="COMIDA DE PERROS"></img>
+                    </div>
+                    <div className="carousel-item">
+                      <img src="dist/img/PurinaGatos.png" class="d-block w-100 align-content-center" alt="..."></img>
+                    </div>
+                    <div className="carousel-item">
+                      <img src="dist/img/JuguetePerro.png" class="d-block w-100 align-content-center" alt="..."></img>
+                    </div>
+                    <div className="carousel-item">
+                      <img src="dist/img/JugueteGato.png" class="d-block w-100 align-content-center" alt="..."></img>
+                    </div>
+                    <div className="carousel-item">
+                      <img src="dist/img/CorreaPerros.png" class="d-block w-100 align-content-center" alt="..."></img>
+                    </div>
+                    <div className="carousel-item">
+                      <img src="dist/img/CorreaGatos.png" class="d-block w-100 align-content-center" alt="..."></img>
+                    </div>
+                    <div className="carousel-item">
+                      <img src="dist/img/HeladoPerros.png" class="d-block w-100 align-content-center" alt="..."></img>
+                    </div>
                   </div>
-                  <div className="carousel-item">
-                    <img src="dist/img/PurinaGatos.png" class="d-block w-100 align-content-center" alt="..."></img>
-                  </div>
-                  <div className="carousel-item">
-                    <img src="dist/img/JuguetePerro.png" class="d-block w-100 align-content-center" alt="..."></img>
-                  </div>
-                  <div className="carousel-item">
-                    <img src="dist/img/JugueteGato.png" class="d-block w-100 align-content-center" alt="..."></img>
-                  </div>
-                  <div className="carousel-item">
-                    <img src="dist/img/CorreaPerros.png" class="d-block w-100 align-content-center" alt="..."></img>
-                  </div>
-                  <div className="carousel-item">
-                    <img src="dist/img/CorreaGatos.png" class="d-block w-100 align-content-center" alt="..."></img>
-                  </div>
-                  <div className="carousel-item">
-                    <img src="dist/img/HeladoPerros.png" class="d-block w-100 align-content-center" alt="..."></img>
-                  </div>
-                  
                 </div>
               </div>
             </div>
           </div>
-          </div>
         </section>
+      
         {/* Fin del contenido de la pagina  */}
       </div>
       <Footer></Footer>
