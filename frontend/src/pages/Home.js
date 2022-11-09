@@ -143,7 +143,7 @@ const Home = () => {
                         <span className="users-list-date">Backend</span>
                       </li>
                       <li>
-                        <img src="dist/img/iconphoto.jpeg" alt="" />
+                        <img src="dist/img/desarrolladores/alison.jpeg" alt="" />
                         <Link className="users-list-name" href="#">Alison</Link>
                         <span className="users-list-date">Frontend</span>
                       </li>
@@ -178,25 +178,25 @@ const Home = () => {
                 <div id="carouselExampleSlidesOnly" className="carousel slide" data-bs-ride="carousel">
                   <div className="carousel-inner">
                     <div className="carousel-item active">
-                      <img src="dist/img/products/PurinaPerros.png" class="d-block w-100 align-content-center" alt="COMIDA DE PERROS"></img>
+                      <img src="dist/img/products/PurinaPerros.png" className="d-block w-100 align-content-center" alt="..."></img>
                     </div>
                     <div className="carousel-item">
-                      <img src="dist/img/products/PurinaGatos.png" class="d-block w-100 align-content-center" alt="..."></img>
+                      <img src="dist/img/products/PurinaGatos.png" className="d-block w-100 align-content-center" alt="..."></img>
                     </div>
                     <div className="carousel-item">
-                      <img src="dist/img/products/JuguetePerro.png" class="d-block w-100 align-content-center" alt="..."></img>
+                      <img src="dist/img/products/JuguetePerro.png" className="d-block w-100 align-content-center" alt="..."></img>
                     </div>
                     <div className="carousel-item">
-                      <img src="dist/img/products/JugueteGato.png" class="d-block w-100 align-content-center" alt="..."></img>
+                      <img src="dist/img/products/JugueteGato.png" className="d-block w-100 align-content-center" alt="..."></img>
                     </div>
                     <div className="carousel-item">
-                      <img src="dist/img/products/CorreaPerros.png" class="d-block w-100 align-content-center" alt="..."></img>
+                      <img src="dist/img/products/CorreaPerros.png" className="d-block w-100 align-content-center" alt="..."></img>
                     </div>
                     <div className="carousel-item">
-                      <img src="dist/img/products/CorreaGatos.png" class="d-block w-100 align-content-center" alt="..."></img>
+                      <img src="dist/img/products/CorreaGatos.png" className="d-block w-100 align-content-center" alt="..."></img>
                     </div>
                     <div className="carousel-item">
-                      <img src="dist/img/products/HeladoPerros.png" class="d-block w-100 align-content-center" alt="..."></img>
+                      <img src="dist/img/products/HeladoPerros.png" className="d-block w-100 align-content-center" alt="..."></img>
                     </div>
                   </div>
                 </div>
