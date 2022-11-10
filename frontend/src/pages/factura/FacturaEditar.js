@@ -159,7 +159,7 @@ const EditarFactura = () => {
                                             </div>
                                             <div className="card-footer">
                                                 <div className="row">
-                                                    <button type="submit" className="btn btn primary">Guardar</button>
+                                                    <button type="submit">Guardar</button>
                                                     &nbsp;&nbsp;
                                                     <Link to={"/factura"} className="btn btn-sm btn-secondary">Regresar</Link>
                                                 </div>
