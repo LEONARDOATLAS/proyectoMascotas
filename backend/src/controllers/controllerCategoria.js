@@ -47,10 +47,10 @@ exports.categoriaEditar = async (req, res) => {
         nombre: req.body.nombre,
         estado: req.body.estado
       })
-      res.json({msg: "actualizar el registro"})
+      res.json({msg: "La categoria se actualizo correctamente"})
 }
 exports.categoriaEliminar = async (req, res) => {
     await Categoria.findOneAndDelete(
       {id:req.params.id})
-      res.json({msg: "producto eliminado "})
+      res.json({msg: "Categoria eliminada "})
 }

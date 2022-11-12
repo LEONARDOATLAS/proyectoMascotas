@@ -27,6 +27,14 @@ const MenuContainer = () => {
             </p>
           </Link>
         </li>
+        <li className="nav-item">
+            <Link to={"/categorias"} className="nav-link">
+              <i className="nav-icon fa fa-tasks" />
+              <p>
+                Categorias
+              </p>
+            </Link>
+          </li>
 
             {/* Para iniciar el Menu de Productos */}
 
