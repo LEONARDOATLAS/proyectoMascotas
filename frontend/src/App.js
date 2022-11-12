@@ -18,6 +18,9 @@ import ProductosVenta from './pages/ventas/ProductosVenta';
 import FacturaListar from './pages/factura/FacturaListar';
 import FormularioFactura from './pages/factura/FacturaFormulario';
 import EditarFactura from './pages/factura/FacturaEditar';
+import CategoriasEditar from './pages/categorias/CategoriasEditar';
+import CategoriasListar from './pages/categorias/CategoriasListar';
+import CategoriasFormulario from './pages/categorias/CategoriasFormulario';
 
 function App() {
   return (
@@ -38,6 +41,9 @@ function App() {
         <Route path="/factura" exact element={<FacturaListar />} />
         <Route path="/facturaagregar" exact element={<FormularioFactura />} />
         <Route path="/facturaeditar/:idfactura" exact element={<EditarFactura />} />
+        <Route path="/categoriaseditar/:idcategoria" exact element={<CategoriasEditar />} />
+        <Route path="/categoriasagregar" exact element={<CategoriasFormulario />} />
+        <Route path="/categorias" exact element={<CategoriasListar />} />
 
         {/* RUTAS DE VENTAS */}
         <Route path="/productosventa" exact element={<ProductosVenta />} />
