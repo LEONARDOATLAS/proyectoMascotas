@@ -1,28 +1,36 @@
 [
     {
-        "id": 1,
+        "id": "laeoz161",
         "codigo": "CA001",
         "nombre": "HUESOS",
-        "estado": "true",
+        "estado": true,
         "creado": ""
     },
     {
-        "id": 2,
+        "id": "laeoz162",
         "codigo": "CA002",
         "nombre": "HUESOS",
-        "estado": "true",
+        "estado": true,
         "creado": ""
     },
     {
-        "id": 3,
-        "codigo": "CA003",
+        "id": "laeoz163",
+        "codigo": "CA001",
         "nombre": "INYECCIONES",
-        "estado": "true"
+        "estado": true,
+        "creado": ""
     },
     {
-        "id": 4,
-        "codigo": "CA004",
+        "id": "laeoz164",
+        "codigo": "CA001",
         "nombre": "CONCENTRADO",
-        "estado": "true"
+        "estado": true
+    },
+    { 
+    "id": "laeoz16t", 
+    "codigo": "HU0004", 
+    "nombre": "leonardo merchan", 
+    "estado": false,
+    "creado": "" 
     }
 ]
