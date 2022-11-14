@@ -12,20 +12,27 @@ import Swal from 'sweetalert2'
 const CategoriasEditar = () => {
     const navigate = useNavigate();
 
-    const {idcategoria} = useParams();
-    let arreglo = idcategoria.split("@");
-    const conscodigo= arreglo[0];
-    const consnombre= arreglo[1];
-    const consestado= arreglo[2]
+    const { idcategoria}  = useParams();
 
-    const [categoria, setCategoria] = useState({
-        codigo: conscodigo,
-        nombre: consnombre,
-        estado: consestado,
-    });
+    const [dataCategorias, setdataCategorias] = useState([]);
+    async function listaCategorias () {
+        const response = await APIInvoke.invokeGET(`/api/categoria/listar/${idcategoria}`);
+        setdataCategorias(response.categoria);
+    };
 
-    const {codigo, nombre, estado}= 
-    categoria;
+    const consutalCategoria = dataCategorias[0];
+    // Guardamos los datos en una constantes 
+    const conscodigo = consutalCategoria?.codigo;
+    const consnombre = consutalCategoria?.nombre;
+    const consestado = consutalCategoria?.estado;
+
+    const [categoria, setCategoria] = useState({});
+
+    const {
+        codigo = conscodigo,
+        nombre = consnombre,
+        estado = consestado
+       } = categoria
 
     const onChange = (e) => {
         setCategoria({
@@ -33,6 +40,12 @@ const CategoriasEditar = () => {
             [e.target.name]: e.target.value,
         });
     };
+
+    useEffect(() => {
+      document.getElementById("codigo").focus();
+      listaCategorias();
+  }, [0]);
+  
 
     const editarCategoria = async () => {
         let arreglo = idcategoria.split("@");
@@ -63,10 +76,6 @@ const CategoriasEditar = () => {
             navigate("/categorias")
         }
     };
-
-    useEffect(() => {
-        document.getElementById("nombre").focus();
-    }, []);
 
     const onSubmit =(e) => {
         e.preventDefault();

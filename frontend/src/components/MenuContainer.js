@@ -57,7 +57,7 @@ const MenuContainer = () => {
           </li>
           <li className="nav-item">
             <Link to={"/productosventa"} className="nav-link">
-              <i className="nav-icon fa fa-shopping-basket" />
+              <i className="nav-icon fa fa-building" />
               <p>
                 ProductosVenta
               </p>
@@ -66,7 +66,7 @@ const MenuContainer = () => {
 
             <li className="nav-item">
             <Link href="#" className="nav-link">
-              <i className="nav-icon fas fa-university" />
+              <i className="nav-icon fa fa-folder-open" />
               <p>
                 Ventas
                 <i className="fas fa-angle-left right" />

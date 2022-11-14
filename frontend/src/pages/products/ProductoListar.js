@@ -19,7 +19,6 @@ const ProductoListar = () => {
     setdataProductos(response.productos);
   };
 
-
   //Eliminar el el producto
   const eliminarProducto = async (e, idProducto) => {
       e.preventDefault();
@@ -138,7 +137,7 @@ const ProductoListar = () => {
                         <td>{item.descripcion}</td>
                         <td>
                           <Link
-                            to={`/productoseditar/${item.id}@${item.codigo}@${item.nombre}@${item.id_categoria}@${item.descripcion}@${item.valor}@${item.iva}@${item.estado}`}
+                            to={`/productoseditar/${item.id}`}
                             className="btn btn-sm btn-primary"
                           >
                             Editar

@@ -7,7 +7,7 @@ class APIInvoke {
         const queryString = queryParams.reduce((last, q, i) => last + `${i === 0 ? '?' : "&"}${q}`, '')
 
         const token = localStorage.getItem("token");
-        console.log(token);
+        //console.log(token);
         let bearer;
         if (token === "") {
             bearer = "";

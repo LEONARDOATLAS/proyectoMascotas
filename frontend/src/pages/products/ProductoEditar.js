@@ -13,31 +13,40 @@ const ProductoEditar = () => {
 
   const navigate = useNavigate();
 
+
   const { idproducto } = useParams();
-  let arreglo = idproducto.split("@");
-  const conscodigo = arreglo[1];
-  const consnombre = arreglo[2];
-  const consid_categoria = arreglo[3];
-  const consdescripcion = arreglo[4];
-  const consurlimagen = arreglo[9];
-  const consvalor = arreglo[5];
-  const consiva = arreglo[6]
-  const conestado = arreglo[7]
+
+  const [dataProductos, setdataProductos] = useState([]);
+
+  const listaProductos = async () => {
+    const response = await APIInvoke.invokeGET(`/api/productos/listar/${idproducto}`);
+    setdataProductos(response.productos);
+  };
+
+  const consultaProductos = dataProductos[0];
 
 
-  const [producto, setProducto] = useState({
-    codigo: conscodigo,
-    nombre: consnombre,
-    id_categoria: consid_categoria,
-    descripcion: consdescripcion,
-    urlimagen: consurlimagen,
-    valor: consvalor,
-    iva: consiva,
-    estado: conestado,
-  });
+  const setCodigo = consultaProductos?.codigo;
+  const setNombre = consultaProductos?.nombre;
+  const setId_categoria = consultaProductos?.id_categoria;
+  const setDescripcion = consultaProductos?.descripcion;
+  const setUrlimagen = consultaProductos?.urlimagen;
+  const setValor = consultaProductos?.valor;
+  const setIva = consultaProductos?.iva;
+  const setEstado = consultaProductos?.estado;
 
-  const {codigo, nombre, id_categoria, descripcion, urlimagen, valor, iva, estado } =
-    producto;
+  const [producto, setProducto] = useState({});
+
+  const {
+    codigo = setCodigo, 
+    nombre = setNombre, 
+    id_categoria = setId_categoria, 
+    descripcion = setDescripcion, 
+    urlimagen = setUrlimagen, 
+    valor = setValor, 
+    iva = setIva,
+    estado = setEstado } = producto;
+
 
   const onChange = (e) => {
     setProducto({
@@ -47,9 +56,6 @@ const ProductoEditar = () => {
   };
 
   const editarProducto = async () => {
-    let arreglo = idproducto.split("@");
-    const idProducto = arreglo[0];
-
     const data = {
       codigo: producto.codigo,
       nombre: producto.nombre,
@@ -60,7 +66,7 @@ const ProductoEditar = () => {
       iva: producto.iva,
       estado: producto.estado,
     };
-    const responde = await APIInvoke.invokePUT(`/api/productos/editar/${idProducto}`, data);
+    const responde = await APIInvoke.invokePUT(`/api/productos/editar/${idproducto}`, data);
     const idprod = responde.msg; // mesaje que fue colocado en controller en donde dice res.json()
 
   
@@ -84,13 +90,16 @@ const ProductoEditar = () => {
   };
 
   useEffect(() => {
-    document.getElementById("nombre").focus();
+    document.getElementById("nombre").focus();  
+    listaProductos();
   }, []);
 
   const onSubmit = (e) => {
     e.preventDefault();
     editarProducto();
   };
+
+
 
   return (
     <div className="wrapper">
@@ -230,11 +239,15 @@ const ProductoEditar = () => {
                     </div>
                     <div className="card-footer">
                       <div className="row">
-                      <button type="submit" className="btn btn-primary">
+                      
+                      <button type="submit" className="col-sm-12 col-md-5 btn btn-lg btn-outline-primary">
                         Guardar
                       </button>
+                     
                       &nbsp;&nbsp;
-                      <Link to={"/productos"} className="btn btn-sm btn-secondary">Regresar</Link>
+                     
+                      <Link to={"/productos"} className="col-sm-12 col-md-5 btn btn-lg btn-outline-secondary">Regresar</Link>
+                      
                       </div>
                     </div>
                   </form>

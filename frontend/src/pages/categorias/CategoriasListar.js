@@ -17,7 +17,7 @@ const CategoriasListar = () => {
         const response = await APIInvoke.invokeGET(`/api/categoria/listar`);
         setdataCategorias(response.categoria);
     };
-console.log(dataCategorias)
+
 
     const eliminarCategoria = async (e, idCategoria) => {
       e.preventDefault();
@@ -38,7 +38,6 @@ console.log(dataCategorias)
       confirmButtonText: 'Continuar',
       cancelButtonText: 'Cancelar!',
       reverseButtons: true
-
     }).then((result) => {
       if (result.isConfirmed) {
         swalWithBootstrapButtons.fire(
@@ -130,7 +129,7 @@ return (
                     <td>{item.estado}</td>
                     <td>
                       <Link
-                        to={`/categoriaseditar/${item.id}@${item.nombre}@${item.estado}`}
+                        to={`/categoriaseditar/${item.id}`}
                         className="btn btn-sm btn-primary"
                       >
                         Editar

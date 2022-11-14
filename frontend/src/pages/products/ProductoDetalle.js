@@ -23,12 +23,14 @@ const ProductoDetalle = () => {
 
   const productos = dataProductos[0];
  
+ 
 
   //Refrescar la pagina 
   useEffect(() => {
     listaProductos();
   }, []);
 
+  console.log(productos)
 
   return (
     <div className="wrapper">
