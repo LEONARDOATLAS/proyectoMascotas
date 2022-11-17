@@ -12,6 +12,17 @@ import APIInvoke from "../../utils/APIInvoke";
 const ProductoListar = () => {
   //const navigate = useNavigate();
 
+  const [loggedIn, setLoggedIn] = useState(false);
+  useEffect(() => {
+    const token = localStorage.getItem('token');
+    if(token !== null) {
+        setLoggedIn(true);
+    }
+});
+
+
+
+
   const [dataProductos, setdataProductos] = useState([]);
 
   const listaProductosdos = async () => {
@@ -84,6 +95,8 @@ const ProductoListar = () => {
           <div className="card">
             <div className="card-header">
               <h3 className="card-title">
+
+                {loggedIn && 
                 <Link
                   to={"/productosagregar"}
                   type="button"
@@ -91,6 +104,7 @@ const ProductoListar = () => {
                 >
                   Agregar nuevo
                 </Link>
+                }
               </h3>
               <div className="card-tools">
                 <button
@@ -136,13 +150,19 @@ const ProductoListar = () => {
                         <td>{item.valor}</td>
                         <td>{item.descripcion}</td>
                         <td>
+
+                          { loggedIn && 
                           <Link
                             to={`/productoseditar/${item.id}`}
                             className="btn btn-sm btn-primary"
                           >
                             Editar
                           </Link>
+
+                           }
+
                           &nbsp;&nbsp;
+                          { loggedIn && 
                           <button
                             onClick={(e) => eliminarProducto(e, item.id)}
                             className="btn btn-sm btn-danger"
@@ -150,6 +170,7 @@ const ProductoListar = () => {
                             <i className="fa fa-trash" aria-hidden="true"></i>
                             Eliminar
                           </button>
+                         }
                           <Link to={`/productosdetalle/${item.id}`} className="btn btn-sm btn-outline-secondary">
                           Mas Detalles
                           </Link>

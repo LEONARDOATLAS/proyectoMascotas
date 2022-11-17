@@ -1,8 +1,16 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import {  Link  } from 'react-router-dom'
 
 
 const MenuContainer = () => {
+
+  const [loggedIn, setLoggedIn] = useState(false);
+  useEffect(() => {
+    const token = localStorage.getItem('token');
+    if(token !== null) {
+        setLoggedIn(true);
+    }
+});
 
 
   return (
@@ -17,25 +25,7 @@ const MenuContainer = () => {
           </Link>
         </li>
 
-        <li className="nav-item">
-          <Link to={"/Plantilla"} className="nav-link"
-          >
-            
-            <i className="nav-icon fa fa-home" />
-            <p>
-              Plantilla
-            </p>
-          </Link>
-        </li>
-        <li className="nav-item">
-            <Link to={"/categorias"} className="nav-link">
-              <i className="nav-icon fa fa-tasks" />
-              <p>
-                Categorias
-              </p>
-            </Link>
-          </li>
-
+   
             {/* Para iniciar el Menu de Productos */}
 
 
@@ -48,14 +38,6 @@ const MenuContainer = () => {
             </Link>
           </li>
           <li className="nav-item">
-            <Link to={"/clientes"} className="nav-link">
-              <i className="nav-icon fa fa-users" />
-              <p>
-                Clientes
-              </p>
-            </Link>
-          </li>
-          <li className="nav-item">
             <Link to={"/productosventa"} className="nav-link">
               <i className="nav-icon fa fa-building" />
               <p>
@@ -64,7 +46,7 @@ const MenuContainer = () => {
             </Link>
           </li>
 
-            <li className="nav-item">
+            <li className="nav-item" diplay="none">
             <Link href="#" className="nav-link">
               <i className="nav-icon fa fa-folder-open" />
               <p>
@@ -93,6 +75,58 @@ const MenuContainer = () => {
               </li>
             </ul>
           </li>
+        
+            { loggedIn &&
+
+              <li className="nav-item">
+              <Link href="#" className="nav-link">
+                <i className="nav-icon fa fa-folder-open" />
+                <p>
+                  Administracion
+                  <i className="fas fa-angle-left right" />
+                </p>
+              </Link>
+              <ul className="nav nav-treeview">
+                <li className="nav-item">
+                  <Link to={"/productos"} className="nav-link">
+                    <i className="far fa-circle nav-icon" />
+                    <p>Poductos</p>
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <a href="/categorias" className="nav-link">
+                    <i className="far fa-circle nav-icon" />
+                    <p>Categorias</p>
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a href="pages/tables/jsgrid.html" className="nav-link">
+                    <i className="far fa-circle nav-icon" />
+                    <p>pendiente</p>
+                  </a>
+                </li>
+
+                <li className="nav-item">
+                <Link to={"/clientes"} className="nav-link">
+                <i className="nav-icon fa fa-users" />
+                <p>
+                Clientes
+                </p>
+                </Link>
+              </li>
+
+
+              </ul>
+            </li>
+            
+            }
+
+              <li className="nav-item d-none d-sm-inline-block" >
+              <Link to={"/login"} className="nav-link">
+              <i className="nav-icon fa fa-power-off"></i>
+                Login
+              </Link>
+            </li>
 
 
       </ul>

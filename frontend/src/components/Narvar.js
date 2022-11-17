@@ -1,7 +1,14 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Narbar = () => {
+
+  const navegate = useNavigate();
+
+  const cerrarSeccion = ()=>{
+    localStorage.removeItem("token");
+    navegate("/inicio")
+  }
 
   return (
     <nav className="main-header navbar navbar-expand navbar-primary navbar-dark">
@@ -17,7 +24,7 @@ const Narbar = () => {
           </Link>
         </li>
         <li className="nav-item d-none d-sm-inline-block">
-          <strong
+          <strong onClick={cerrarSeccion}
             className="nav-link"
             style={{ cursor: "pointer" }}
           >
