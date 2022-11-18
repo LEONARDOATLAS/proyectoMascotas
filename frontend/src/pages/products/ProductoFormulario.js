@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import uniquid from "uniqid"
 
 import ContentHeader from "../../components/ContentHeard";
 import Footer from "../../components/Footer";
@@ -26,6 +27,15 @@ const ProductoFormulario = () => {
     estado: "",
   });
 
+
+  const [dataCategorias, setdataCategorias] = useState([]);
+
+  const listaProductos = async () => {
+    const response = await APIInvoke.invokeGET(`/api/categoria/listar`);
+    setdataCategorias(response.categoria);
+  };
+ 
+ 
   const { id, codigo, nombre, id_categoria, descripcion, urlimagen, valor, iva, estado } =
     producto;
 
@@ -38,7 +48,7 @@ const ProductoFormulario = () => {
 
   const crearProducto = async () => {
     const data = {
-      id: producto.id,
+      id: uniquid(),
       codigo: producto.codigo,
       nombre: producto.nombre,
       id_categoria: producto.id_categoria,
@@ -83,7 +93,8 @@ const ProductoFormulario = () => {
   };
 
   useEffect(() => {
-    document.getElementById("id").focus();
+    document.getElementById("codigo").focus();
+    listaProductos();
   }, []);
 
   const onSubmit = (e) => {
@@ -125,7 +136,7 @@ const ProductoFormulario = () => {
                           value={id}
                           onChange={onChange}
                           placeholder="IdLocal"
-                          required
+                          disabled
                         />
                       </div>
 
@@ -155,18 +166,16 @@ const ProductoFormulario = () => {
                           required
                         />
                       </div>
+
                       <div className="form-group">
-                        <label htmlFor="txtcategoria">Categoria</label>
-                        <input
-                          type="text"
-                          className="form-control"
-                          id="id_categoria"
-                          name="id_categoria"
-                          value={id_categoria}
-                          onChange={onChange}
-                          placeholder="Categoria"
-                          required
-                        />
+                        <label htmlFor="txtcategoria">Categoria: </label>
+                        
+                        <select id="id_categoria" name="id_categoria" value={id_categoria} onChange={onChange} className="form-control form-control-sm">
+                        <option key={1}>Seleccione la categoria: </option>
+                          {dataCategorias.map((item) => (
+                            <option key={item._id} value={item.id}>{item.nombre}</option>
+                          ))}
+                        </select>
                       </div>
 
                       <div className="form-group">

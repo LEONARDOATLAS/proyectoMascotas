@@ -9,19 +9,23 @@ import APIInvoke from "../../utils/APIInvoke";
 
 import "../css/productos.css"
 
+
 const ProductoDetalle = () => {
 
 
   const { idproducto } = useParams();
+  const idProducto = idproducto
+
 
   const [dataProductos, setdataProductos] = useState([]);
 
   const listaProductos = async () => {
-    const response = await APIInvoke.invokeGET(`/api/productos/listar/${idproducto}`);
+    const response = await APIInvoke.invokeGET(`/api/productos/listar/${idProducto}`);
     setdataProductos(response.productos);
   };
 
   const productos = dataProductos[0];
+
  
  
 
@@ -30,7 +34,7 @@ const ProductoDetalle = () => {
     listaProductos();
   }, []);
 
-  console.log(productos)
+
 
   return (
     <div className="wrapper">

@@ -31,7 +31,7 @@ exports.productoListar = async (req, res) => {
 exports.listarProductoId = async (req, res) => {
   try {
     const productos = await Productos.find({ id: req.params.id });
-    res.json(productos)
+    res.json({productos})
   } catch (error) {
     res.status(400).send("Hubo un error");
   }

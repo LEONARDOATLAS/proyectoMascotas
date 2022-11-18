@@ -13,14 +13,12 @@ const ProductoListar = () => {
   //const navigate = useNavigate();
 
   const [loggedIn, setLoggedIn] = useState(false);
-  useEffect(() => {
+  const consutlaToken = async () =>{
     const token = localStorage.getItem('token');
     if(token !== null) {
         setLoggedIn(true);
     }
-});
-
-
+  }
 
 
   const [dataProductos, setdataProductos] = useState([]);
@@ -75,6 +73,7 @@ const ProductoListar = () => {
   //Refrescar la pagina 
   useEffect(() => {
     listaProductosdos();
+    consutlaToken();
   }, []);
 
   return (
@@ -142,12 +141,12 @@ const ProductoListar = () => {
                 <tbody>
                   {dataProductos.map((item, index) => (
                     <tr key={item._id}>
-                        <td>{index + 1}</td>
+                        <td style={{textAlign: "center"}}>{index + 1}</td>
                         <td>{item.id}</td>
                         <td>{item.codigo}</td>
                         <td>{item.nombre}</td>
                         <td>{item.id_categoria}</td>
-                        <td>{item.valor}</td>
+                        <td style={{textAlign: "right"}}>{new Intl.NumberFormat().format(item.valor)}</td>
                         <td>{item.descripcion}</td>
                         <td>
 
@@ -162,6 +161,7 @@ const ProductoListar = () => {
                            }
 
                           &nbsp;&nbsp;
+                          
                           { loggedIn && 
                           <button
                             onClick={(e) => eliminarProducto(e, item.id)}

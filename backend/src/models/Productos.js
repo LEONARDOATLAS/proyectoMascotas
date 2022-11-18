@@ -5,7 +5,7 @@ const ProductoSchema = new Schema({
     id: {type: String, require: true, unique: true },
     codigo: {type: String,require: true},
     nombre: {type: String, requiere: true},
-    id_categoria: {type: Number,requiere: true},
+    id_categoria: {type: String,requiere: true},
     descripcion: {type: String, requiere: true},
     urlimagen: {type: String},
     valor: {type: Number,requiere: true},
