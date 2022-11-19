@@ -10,7 +10,7 @@ const MenuContainer = () => {
     if(token !== null) {
         setLoggedIn(true);
     }
-});
+},[]);
 
 
   return (
@@ -46,7 +46,9 @@ const MenuContainer = () => {
             </Link>
           </li>
 
-            <li className="nav-item" diplay="none">
+          { loggedIn &&
+
+          <li className="nav-item" diplay="none">
             <Link href="#" className="nav-link">
               <i className="nav-icon fa fa-folder-open" />
               <p>
@@ -75,6 +77,8 @@ const MenuContainer = () => {
               </li>
             </ul>
           </li>
+
+          }
         
             { loggedIn &&
 

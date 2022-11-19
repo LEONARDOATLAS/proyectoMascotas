@@ -8,6 +8,7 @@ const routerCategoria = require("./categoria")
 const routerClientes = require("./clientes")
 const routerPedidos = require("./pedidos")
 const routerFactura =require("./factura")
+const auth = require("../middleware/auth")
 
 router.use("/auth", routerAuth);
 router.use("/usuarios", routerUsuarios)

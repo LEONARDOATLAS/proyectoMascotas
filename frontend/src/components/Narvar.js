@@ -7,7 +7,7 @@ const Narbar = () => {
 
   const cerrarSeccion = ()=>{
     localStorage.removeItem("token");
-    navegate("/inicio")
+    navegate("/productosventa")
   }
 
   return (
@@ -30,11 +30,6 @@ const Narbar = () => {
           >
             Salir
           </strong>
-        </li>
-        <li className="nav-item d-none d-sm-inline-block">
-          <Link to={"/"} className="nav-link">
-            Inicio
-          </Link>
         </li>
         <li className="nav-item d-none d-sm-inline-block" >
           <Link to={"/login"} className="nav-link">

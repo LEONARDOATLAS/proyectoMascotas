@@ -9,6 +9,21 @@ const Login = () => {
   // para redireccionar el complente de home
   const navegate = useNavigate();
 
+
+  const [loggedIn, setLoggedIn] = useState(false);
+  const consutlaToken = async () =>{
+    const token = localStorage.getItem('token');
+    if(token !== null) {
+        setLoggedIn(true);
+    }
+  }
+
+    //Refrescar la pagina 
+    useEffect(() => {
+      consutlaToken();
+    });
+
+
   const [usuario, setUsuario] = useState({
     email: '',
     password: ''
@@ -122,9 +137,12 @@ const Login = () => {
                 <button type="submit" className="btn btn-block btn-success">
                   Ingresar
                 </button>
+
+                {loggedIn && 
                 <Link to={"/crearcuenta"} className="btn btn-block btn-danger">
                   Crear Cuenta
                 </Link>
+                }
               </div>
               <div>
               <Link to={"/"} className="btn btn-block btn-secondary">

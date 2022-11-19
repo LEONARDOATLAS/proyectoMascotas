@@ -19,4 +19,7 @@ const con_categorias_productos = require("../controllers/consultas/controllerPro
 router.get("/productoscategorias", con_categorias_productos)
 router.get("/productoscategorias/:id", con_categorias_productos)
 
+// rutas sin autenticacion 
+router.get("/listarHome", productController.productoListar);
+
 module.exports = router

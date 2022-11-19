@@ -16,12 +16,12 @@ const Home = () => {
   const [dataClientes, setdataClientes] = useState([]);
 
   const listaProductos = async () => {
-    const response = await APIInvoke.invokeGET(`/api/productos/listar`);
+    const response = await APIInvoke.invokeGET(`/api/productos/listarHome`);
     setdataProductos(response.productos);
   };
 
   const listaClientes = async () => {
-    const response = await APIInvoke.invokeGET(`/api/clientes/listar`);
+    const response = await APIInvoke.invokeGET(`/api/clientes/listarHome`);
     setdataClientes(response.clientes);
   };
 

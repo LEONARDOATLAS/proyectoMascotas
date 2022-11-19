@@ -133,7 +133,7 @@ const ProductoListar = () => {
                     <th style={{ width: "4%" }}>Codigo</th>
                     <th style={{ width: "15%" }}>Nombre</th>
                     <th style={{ width: "5%" }}>Categoria</th>
-                    <th style={{ width: "4%" }}>Valor</th>
+                    <th style={{ width: "3%" }}>Valor</th>
                     <th style={{ width: "15%" }}>Descripción</th>
                     <th style={{ width: "12%" }}>Opciones</th>
                   </tr>

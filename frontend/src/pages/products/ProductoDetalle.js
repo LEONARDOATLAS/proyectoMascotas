@@ -32,7 +32,7 @@ const ProductoDetalle = () => {
   //Refrescar la pagina 
   useEffect(() => {
     listaProductos();
-  }, []);
+  });
 
 
 
