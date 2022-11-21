@@ -37,8 +37,8 @@ const Narbar = () => {
           </Link>
         </li>
         <li className="nav-item d-none d-sm-inline-block" >
-          <Link to={"/crearcuenta"} className="nav-link" >
-            CrearUsuario
+          <Link to={"/inicio"} className="nav-link" >
+            Inicio
           </Link>
         </li>
       </ul>

@@ -21,13 +21,15 @@ import EditarFactura from './pages/factura/FacturaEditar';
 import CategoriasEditar from './pages/categorias/CategoriasEditar';
 import CategoriasListar from './pages/categorias/CategoriasListar';
 import CategoriasFormulario from './pages/categorias/CategoriasFormulario';
+import Inicio from './pages/principal/Inicio';
 
 function App() {
   return (
     <Fragment>
     <Router>
       <Routes>
-        <Route path="/" exact element={<Home />} />
+        <Route path="/home" exact element={<Home />} />
+        <Route path='/inicio' element={<Inicio />} />
         <Route path="/login" exact element={<Login />} />
         <Route path="/crearcuenta" exact element={<CrearCuenta />} />
         <Route path="/plantilla" exact element={<Plantilla />} />

@@ -167,7 +167,8 @@ const ProductoFormulario = () => {
                         />
                       </div>
 
-                      <div className="form-group">
+                      <div className="row">
+                      <div className="form-group col-md-6">
                         <label htmlFor="txtcategoria">Categoria: </label>
                         
                         <select id="id_categoria" name="id_categoria" value={id_categoria} onChange={onChange} className="form-control form-control-sm">
@@ -176,6 +177,8 @@ const ProductoFormulario = () => {
                             <option key={item._id} value={item.id}>{item.nombre}</option>
                           ))}
                         </select>
+                        <Link to={"/categoriasagregar"}>Categoria</Link>
+                      </div>
                       </div>
 
                       <div className="form-group">
