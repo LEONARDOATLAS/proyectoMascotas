@@ -29,7 +29,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/home" exact element={<Home />} />
-        <Route path='/inicio' element={<Inicio />} />
+        <Route path='/' element={<Inicio />} />
         <Route path="/login" exact element={<Login />} />
         <Route path="/crearcuenta" exact element={<CrearCuenta />} />
         <Route path="/plantilla" exact element={<Plantilla />} />
